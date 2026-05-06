@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Required · Staff Ready Ops.</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="1402abf4-6ac0-4647-9e6c-a5e6dc020640"></script>
+  <style>
+    .gate-wrap {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 80px 24px 60px;
+      text-align: center;
+    }
+    .gate-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 28px;
+      opacity: .18;
+    }
+    .gate-eyebrow {
+      font-size: .65rem;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--brand-accent);
+      margin-bottom: 14px;
+    }
+    .gate-wrap h1 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+    .gate-wrap p {
+      color: var(--text-muted);
+      font-size: .95rem;
+      margin-bottom: 0;
+    }
+    .gate-actions {
+      margin-top: 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+    .gate-back {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .gate-back:hover { color: var(--text-main); }
+  </style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="wrap">
+    <a class="nav-logo" href="index.html">Staff Ready Ops.</a>
+    <button class="nav-burger" id="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="onboarding/index.html">Onboarding</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="gate-wrap">
+    <svg class="gate-icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M28 44a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm-8.5-10.5C21.8 31.2 24.8 29.5 28 29.5s6.2 1.7 8.5 4" stroke="#141412" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M14 27C17.8 23 22.7 20.5 28 20.5S38.2 23 42 27" stroke="#141412" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M8 21C13.3 15.5 20.3 12 28 12s14.7 3.5 20 9" stroke="#141412" stroke-width="2.2" stroke-linecap="round"/>
+    </svg>
+
+    <div class="gate-eyebrow">Access Restricted</div>
+    <h1>Company Network Required</h1>
+    <p>This section is only available on the restaurant's Wi-Fi network. Connect and try again.</p>
+
+    <div class="gate-actions">
+      <button class="btn btn-accent btn-arrow" onclick="location.reload()">Try Again</button>
+      <a class="gate-back" href="index.html">&larr; Back to Home</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>Staff Ready Ops. &middot; <a href="index.html">Operations Playbook</a></p>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const nav    = document.getElementById('main-nav');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOH Access · Staff Ready Ops.</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/auth.js"></script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="1402abf4-6ac0-4647-9e6c-a5e6dc020640"></script>
+  <style>
+    .gate-wrap {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 80px 24px 60px;
+      text-align: center;
+    }
+    .gate-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 28px;
+      opacity: .18;
+    }
+    .gate-eyebrow {
+      font-size: .65rem;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--brand-accent);
+      margin-bottom: 14px;
+    }
+    .gate-wrap h1 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+    .gate-wrap > p {
+      color: var(--text-muted);
+      font-size: .92rem;
+      margin-bottom: 0;
+    }
+    .gate-form {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: stretch;
+    }
+    .gate-input {
+      width: 100%;
+      padding: 14px 16px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .95rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      outline: none;
+      transition: border-color .2s;
+    }
+    .gate-input:focus { border-color: var(--brand-accent); }
+    .gate-input::placeholder { color: var(--text-muted); }
+    .gate-error {
+      font-size: .78rem;
+      color: #b94040;
+      letter-spacing: .03em;
+      display: none;
+    }
+    .gate-error.visible { display: block; }
+    .gate-actions {
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+    .gate-actions .btn { width: 100%; justify-content: center; }
+    .gate-back {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .gate-back:hover { color: var(--text-main); }
+  </style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="wrap">
+    <a class="nav-logo" href="index.html">Staff Ready Ops.</a>
+    <button class="nav-burger" id="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="onboarding/index.html">Onboarding</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="gate-wrap">
+    <svg class="gate-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="8" y="22" width="32" height="20" rx="2" stroke="#141412" stroke-width="2.2"/>
+      <path d="M16 22v-6a8 8 0 0 1 16 0v6" stroke="#141412" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="24" cy="33" r="3" fill="#141412"/>
+    </svg>
+
+    <div class="gate-eyebrow">Restricted Access</div>
+    <h1>Back of House</h1>
+    <p>Enter the BOH team password to access recipes and kitchen resources.</p>
+
+    <form class="gate-form" id="boh-form" onsubmit="handleSubmit(event)">
+      <input
+        class="gate-input"
+        id="boh-password"
+        type="password"
+        placeholder="BOH password"
+        autocomplete="current-password"
+        required
+      >
+      <span class="gate-error" id="boh-error">Incorrect password — check with your manager.</span>
+      <div class="gate-actions">
+        <button class="btn btn-accent btn-arrow" type="submit">Enter</button>
+        <a class="gate-back" href="index.html">&larr; Back to Home</a>
+      </div>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <p>Staff Ready Ops. &middot; <a href="index.html">Operations Playbook</a></p>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const nav    = document.getElementById('main-nav');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const pw  = document.getElementById('boh-password').value;
+    const err = document.getElementById('boh-error');
+    err.classList.remove('visible');
+    submitBOHPassword(pw, () => {
+      err.classList.add('visible');
+      document.getElementById('boh-password').value = '';
+      document.getElementById('boh-password').focus();
+    });
+  }
+</script>
+</body>
+</html>
