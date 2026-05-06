@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Closer · Staff Ready Ops.</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="wrap">
+    <a class="nav-logo" href="../index.html">Staff Ready Ops.</a>
+    <button class="nav-burger" id="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+<ul class="nav-links">
+  <li><a href="../index.html">Home</a></li>
+  <li class="has-dropdown">
+    <a href="../sops/index.html">SOPs</a>
+    <div class="dropdown">
+      <a href="../sops/index.html">All SOPs</a>
+      <a href="../sops/handwashing.html">Hygiene</a>
+      <a href="../sops/allergen-handling.html">Allergens</a>
+      <a href="../sops/temp-logging.html">Food Safety</a>
+      <a href="../sops/knife-safety.html">Equipment</a>
+      <a href="../sops/cold-prep-setup.html">Prep</a>
+      <a href="../sops/dry-storage.html">Storage</a>
+      <a href="../sops/dish-machine-operation.html">Dishwashing</a>
+    </div>
+  </li>
+  <li class="has-dropdown"><a href="../checklists/opening.html">Operations</a>
+    <div class="dropdown">
+      <a href="../checklists/opening.html">Opening Checklists</a>
+      <a href="../checklists/closing.html">Closing Checklists</a>
+      <a href="../back-of-house/index.html">BOH</a>
+      <a href="../front-of-house/index.html">FOH</a>
+      <a href="../food-safety/index.html">Food Safety</a>
+      <a href="../recipes/index.html">Recipes</a>
+    </div>
+  </li>
+  <li class="has-dropdown"><a href="../roles/index.html">Team</a>
+    <div class="dropdown">
+      <a href="../roles/index.html">All Team Guides</a>
+      <a href="../roles/line-cook.html">Line Cook</a>
+      <a href="../roles/prep-cook.html">Prep Cook</a>
+      <a href="../roles/dishwasher.html">Dishwasher</a>
+      <a href="../roles/opener.html">Opener</a>
+      <a href="../roles/closer.html">Closer</a>
+      <a href="../front-of-house/roles/server.html">Server</a>
+      <a href="../front-of-house/roles/host.html">Host</a>
+      <a href="../front-of-house/roles/bartender.html">Bartender</a>
+    </div>
+  </li>
+  <li class="has-dropdown"><a href="../onboarding/index.html">Onboarding</a>
+    <div class="dropdown">
+      <a href="../onboarding/line-cook.html">Line Cook</a>
+      <a href="../onboarding/prep-cook.html">Prep Cook</a>
+      <a href="../onboarding/opener.html">Opener</a>
+      <a href="../onboarding/closer.html">Closer</a>
+      <a href="../onboarding/dishwasher.html">Dishwasher</a>
+          <a href="../onboarding/server.html">Server</a>
+          <a href="../onboarding/host.html">Host</a>
+          <a href="../onboarding/bartender.html">Bartender</a>
+    </div>
+  </li>
+  <li><a href="../search/index.html" class="nav-search-link">Search</a></li>
+  <li><a href="../crisis/index.html" class="nav-crisis">Crisis</a></li>
+</ul>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+
+    <div class="page-header">
+      <h1>Closer</h1>
+      <div class="meta">
+        <span><span class="meta-dot"></span> Kitchen &mdash; Closing Shift</span>
+      </div>
+    </div>
+
+    <p style="color:var(--text-muted);margin-bottom:36px;font-size:.95rem;line-height:1.78;">The kitchen is your responsibility until the door is locked. Everything must be done to standard before you leave — not almost done, fully done.</p>
+
+    <a class="ob-role-banner" href="../onboarding/closer.html">
+      <span class="ob-role-banner-label">New hire?</span>
+      <span class="ob-role-banner-text">Follow your day-by-day First Week path — it tells you exactly what to read and in what order before each shift.</span>
+      <span class="ob-role-banner-arrow">&rarr;</span>
+    </a>
+
+    <div class="section-label">Your SOPs</div>
+    <ul class="role-sop-list">
+      <li><a href="../sops/grill-cleaning.html">Grill Cleaning</a></li>
+      <li><a href="../sops/temp-logging.html">Temperature Logging</a></li>
+      <li><a href="../sops/dry-storage.html">Dry Storage</a></li>
+      <li><a href="../sops/knife-safety.html">Knife Safety</a></li>
+      <li><a href="../sops/handwashing.html">Handwashing Procedure</a></li>
+    </ul>
+
+    <div class="section-label">Your Checklists</div>
+    <ul class="role-sop-list">
+      <li><a href="../back-of-house/checklists/opening.html">BOH Opening Checklist</a></li>
+      <li><a href="../back-of-house/checklists/closing.html">BOH Closing Checklist</a></li>
+      <li><a href="../checklists/opening.html">All Role Opening Responsibilities</a></li>
+      <li><a href="../checklists/closing.html">All Role Closing Responsibilities</a></li>
+    </ul>
+
+  </div>
+</main>
+
+<footer>
+  <p>Staff Ready Ops. &middot; <a href="../index.html">Operations Playbook</a></p>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const nav    = document.getElementById('main-nav');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+  // Active nav state
+  (function(){
+    var p = window.location.pathname;
+    var rules = [
+      ['/sops/', 'SOPs'],
+      ['/checklists/', 'Operations'],
+      ['/back-of-house/', 'Operations'],
+      ['/front-of-house/', 'Operations'],
+      ['/food-safety/', 'Operations'],
+      ['/recipes/', 'Operations'],
+      ['/roles/', 'Team'],
+      ['/onboarding/', 'Onboarding'],
+    ];
+    var links = document.querySelectorAll('#main-nav .nav-links > li > a');
+    for (var i = 0; i < rules.length; i++) {
+      if (p.indexOf(rules[i][0]) !== -1) {
+        for (var j = 0; j < links.length; j++) {
+          if (links[j].textContent.trim() === rules[i][1]) {
+            links[j].closest('li').classList.add('active');
+            break;
+          }
+        }
+        break;
+      }
+    }
+  })();
+
+  // In-page TOC
+  (function(){
+    var items = document.querySelectorAll('.section-label');
+    if (items.length < 3) return;
+    var toc = document.createElement('nav');
+    toc.className = 'page-toc';
+    var lbl = document.createElement('span');
+    lbl.className = 'page-toc-label';
+    lbl.textContent = 'On this page';
+    toc.appendChild(lbl);
+    var ul = document.createElement('ul');
+    items.forEach(function(el, i) {
+      var id = 'sec-' + i;
+      el.id = id;
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#' + id;
+      a.textContent = el.textContent.trim();
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    toc.appendChild(ul);
+    var wrap = document.querySelector('main .wrap');
+    if (!wrap) return;
+    var ph = wrap.querySelector('.page-header');
+    var ab = wrap.querySelector('.alert-block');
+    var ref = ab || ph;
+    if (ref) ref.insertAdjacentElement('afterend', toc);
+    else wrap.prepend(toc);
+  })();
+</script>
+
+<a class="crisis-float" href="../crisis/index.html" aria-label="Crisis reference">
+  <span class="crisis-float-icon">!</span>
+  <span>Crisis</span>
+</a>
+</body>
+</html>

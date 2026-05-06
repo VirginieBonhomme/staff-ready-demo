@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanitizer Concentration Log · Staff Ready Ops.</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .log-table { width:100%; border-collapse:collapse; margin:24px 0 32px; font-size:.9rem; }
+    .log-table th { background:var(--bg-card); border:1.5px solid #d0cbbe; padding:10px 12px; text-align:left; font-family:'DM Sans',sans-serif; font-weight:600; font-size:.8rem; text-transform:uppercase; letter-spacing:.06em; color:var(--text-muted); }
+    .log-table td { border:1px solid #d0cbbe; padding:10px 12px; vertical-align:top; }
+    .log-table tr:nth-child(even) td { background:#faf8f2; }
+    .write-in { min-width:70px; }
+    .print-note { font-size:.85rem; color:var(--text-muted); margin-bottom:28px; line-height:1.6; padding:14px 18px; background:var(--bg-card); border-left:3px solid var(--brand-accent); }
+    .log-date-header { display:flex; gap:32px; align-items:center; margin:0 0 20px; font-size:.95rem; }
+    .log-date-header span { font-family:'DM Sans',sans-serif; font-weight:600; color:var(--text-muted); }
+    .log-date-header .date-field { border-bottom:1.5px solid #9B7035; min-width:160px; display:inline-block; height:22px; }
+    @media print {
+      nav, footer, .print-note { display:none; }
+      body { font-size:11pt; }
+      .log-table th, .log-table td { padding:7px 9px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="wrap">
+    <a class="nav-logo" href="../index.html">Staff Ready Ops.</a>
+    <button class="nav-burger" id="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+<ul class="nav-links">
+  <li><a href="../index.html">Home</a></li>
+  <li class="has-dropdown">
+    <a href="../sops/index.html">SOPs</a>
+    <div class="dropdown">
+      <a href="../sops/index.html">All SOPs</a>
+      <a href="../sops/handwashing.html">Hygiene</a>
+      <a href="../sops/allergen-handling.html">Allergens</a>
+      <a href="../sops/temp-logging.html">Food Safety</a>
+      <a href="../sops/knife-safety.html">Equipment</a>
+      <a href="../sops/cold-prep-setup.html">Prep</a>
+      <a href="../sops/dry-storage.html">Storage</a>
+      <a href="../sops/dish-machine-operation.html">Dishwashing</a>
+    </div>
+  </li>
+  <li class="has-dropdown"><a href="../checklists/opening.html">Operations</a>
+    <div class="dropdown">
+      <a href="../checklists/opening.html">Opening Checklists</a>
+      <a href="../checklists/closing.html">Closing Checklists</a>
+      <a href="../back-of-house/index.html">BOH</a>
+      <a href="../front-of-house/index.html">FOH</a>
+      <a href="../food-safety/index.html">Food Safety</a>
+      <a href="../recipes/index.html">Recipes</a>
+    </div>
+  </li>
+  <li class="has-dropdown"><a href="../roles/index.html">Team</a>
+    <div class="dropdown">
+      <a href="../roles/index.html">All Team Guides</a>
+      <a href="../roles/line-cook.html">Line Cook</a>
+      <a href="../roles/prep-cook.html">Prep Cook</a>
+      <a href="../roles/dishwasher.html">Dishwasher</a>
+      <a href="../roles/opener.html">Opener</a>
+      <a href="../roles/closer.html">Closer</a>
+      <a href="../front-of-house/roles/server.html">Server</a>
+      <a href="../front-of-house/roles/host.html">Host</a>
+      <a href="../front-of-house/roles/bartender.html">Bartender</a>
+    </div>
+  </li>
+  <li class="has-dropdown"><a href="../onboarding/index.html">Onboarding</a>
+    <div class="dropdown">
+      <a href="../onboarding/line-cook.html">Line Cook</a>
+      <a href="../onboarding/prep-cook.html">Prep Cook</a>
+      <a href="../onboarding/opener.html">Opener</a>
+      <a href="../onboarding/closer.html">Closer</a>
+      <a href="../onboarding/dishwasher.html">Dishwasher</a>
+      <a href="../onboarding/server.html">Server</a>
+      <a href="../onboarding/host.html">Host</a>
+      <a href="../onboarding/bartender.html">Bartender</a>
+    </div>
+  </li>
+  <li><a href="../search/index.html" class="nav-search-link">Search</a></li>
+  <li><a href="../crisis/index.html" class="nav-crisis">Crisis</a></li>
+</ul>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+
+    <div class="page-header">
+      <h1>Sanitizer Concentration Log</h1>
+      <div class="meta">
+        <span><span class="meta-dot"></span> Role: All Kitchen Staff</span>
+        <span><span class="meta-dot"></span> Updated: May 2026</span>
+        <span><span class="meta-dot"></span> Category: Food Safety Record</span>
+      </div>
+    </div>
+
+    <p style="color:var(--text-muted);font-size:.95rem;line-height:1.78;margin-bottom:32px;">Test your solution, then log the result via the form below. Test at the start of each shift, every 2 hours during service, and whenever a fresh batch is made. Every submission is timestamped and saved to the manager's Google Sheet.</p>
+
+    <div class="section-label">Concentration Reference</div>
+    <div class="temp-table" style="margin-bottom:28px;">
+      <div class="temp-row header">
+        <div>Sanitizer type</div>
+        <div>Acceptable range</div>
+      </div>
+      <div class="temp-row">
+        <div>Chlorine (bleach-based)</div>
+        <div class="temp-value">100&ndash;200 ppm</div>
+      </div>
+      <div class="temp-row">
+        <div>Quaternary ammonium (quat)</div>
+        <div class="temp-value">200&ndash;400 ppm</div>
+      </div>
+    </div>
+
+    <div class="section-label">Have These Details Ready Before You Submit</div>
+    <div class="checklist-preview">
+      <div class="checklist-category">
+        <div class="checklist-item">Date and time of the test</div>
+        <div class="checklist-item">Location — three-sink, spray bottle, or other</div>
+        <div class="checklist-item">Sanitizer type — chlorine or quaternary ammonium (quat)</div>
+        <div class="checklist-item">ppm reading from the test strip</div>
+        <div class="checklist-item">Pass or fail result</div>
+        <div class="checklist-item">Action taken if the test failed — discarded and remade, retested</div>
+        <div class="checklist-item">Your initials</div>
+      </div>
+    </div>
+
+    <a class="btn btn-arrow" href="#" target="_blank" rel="noopener" style="margin-top:8px;">Submit Sanitizer Test Result</a>
+    <p style="margin-top:18px;font-size:.8rem;color:var(--text-muted);line-height:1.68;">Submissions are logged automatically in the manager's Google Sheet. Submit once per test — not once per shift.</p>
+
+    <div class="related">
+      <h2>Related</h2>
+      <div class="related-links">
+        <a href="../sops/sanitizer-testing.html">Sanitizer Testing SOP</a>
+        <a href="../sops/three-sink-sanitizing.html">Three-Sink Sanitising</a>
+        <a href="temp-log.html">Daily Temperature Log</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>Staff Ready Ops. &middot; <a href="../index.html">Operations Playbook</a></p>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const nav    = document.getElementById('main-nav');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+  // Active nav state
+  (function(){
+    var p = window.location.pathname;
+    var rules = [
+      ['/sops/', 'SOPs'],
+      ['/checklists/', 'Operations'],
+      ['/back-of-house/', 'Operations'],
+      ['/front-of-house/', 'Operations'],
+      ['/food-safety/', 'Operations'],
+      ['/recipes/', 'Operations'],
+      ['/roles/', 'Team'],
+      ['/onboarding/', 'Onboarding'],
+    ];
+    var links = document.querySelectorAll('#main-nav .nav-links > li > a');
+    for (var i = 0; i < rules.length; i++) {
+      if (p.indexOf(rules[i][0]) !== -1) {
+        for (var j = 0; j < links.length; j++) {
+          if (links[j].textContent.trim() === rules[i][1]) {
+            links[j].closest('li').classList.add('active');
+            break;
+          }
+        }
+        break;
+      }
+    }
+  })();
+
+  // In-page TOC
+  (function(){
+    var items = document.querySelectorAll('.section-label');
+    if (items.length < 3) return;
+    var toc = document.createElement('nav');
+    toc.className = 'page-toc';
+    var lbl = document.createElement('span');
+    lbl.className = 'page-toc-label';
+    lbl.textContent = 'On this page';
+    toc.appendChild(lbl);
+    var ul = document.createElement('ul');
+    items.forEach(function(el, i) {
+      var id = 'sec-' + i;
+      el.id = id;
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#' + id;
+      a.textContent = el.textContent.trim();
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    toc.appendChild(ul);
+    var wrap = document.querySelector('main .wrap');
+    if (!wrap) return;
+    var ph = wrap.querySelector('.page-header');
+    var ab = wrap.querySelector('.alert-block');
+    var ref = ab || ph;
+    if (ref) ref.insertAdjacentElement('afterend', toc);
+    else wrap.prepend(toc);
+  })();
+</script>
+
+<a class="crisis-float" href="../crisis/index.html" aria-label="Crisis reference">
+  <span class="crisis-float-icon">!</span>
+  <span>Crisis</span>
+</a>
+</body>
+</html>
