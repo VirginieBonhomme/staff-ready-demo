@@ -1858,12 +1858,38 @@ main { padding-bottom: 72px; }
   line-height: 1.55;
 }
 
+/* ── Print button (screen only) ────────────────── */
+.print-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 28px 0 0;
+  padding: 9px 18px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  letter-spacing: .01em;
+  transition: border-color .15s, background .15s;
+}
+.print-btn:hover { border-color: var(--accent); background: var(--bg); }
+.print-btn::before { content: '⎙'; font-size: 1rem; }
+
+/* ── Print fields (hidden on screen, shown in print) */
+.print-fields {
+  display: none;
+}
+
 /* ── Print styles ──────────────────────────────── */
 @media print {
   #main-nav,
   .crisis-float,
   .related,
   .btn,
+  .print-btn,
   .page-toc,
   footer,
   .hero-search,
@@ -1885,14 +1911,14 @@ main { padding-bottom: 72px; }
   .page-header {
     padding: 0 0 14pt;
     margin-bottom: 18pt;
-    border-bottom: 1pt solid #000;
+    border-bottom: 1.5pt solid #000;
   }
   h1 { font-size: 20pt; }
   h2 { font-size: 14pt; }
   h3 { font-size: 12pt; }
 
   .alert-block {
-    border: 1pt solid #000;
+    border: 1.5pt solid #000;
     background: #fff !important;
     color: #000;
     padding: 8pt 10pt;
@@ -1908,16 +1934,103 @@ main { padding-bottom: 72px; }
     margin-top: 14pt;
     letter-spacing: .1em;
   }
+
+  /* Checklists */
+  .checklist-preview { border: none; background: none; padding: 0; }
+  .checklist-category {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .checklist-category h3 { margin-top: 10pt; font-size: 11pt; }
   .checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8pt;
     padding: 5pt 0;
     border-bottom: .5pt solid #ccc;
     color: #000;
     font-size: 10pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
-  .checklist-preview { border: none; background: none; padding: 0; }
-  .checklist-category h3 { margin-top: 10pt; font-size: 11pt; }
+  .checklist-item::before {
+    content: '';
+    flex-shrink: 0;
+    display: inline-block;
+    width: 11pt;
+    height: 11pt;
+    margin-top: 1pt;
+    border: 1pt solid #000;
+    border-radius: 2pt;
+  }
+
+  /* Steps */
+  .step {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 14pt;
+  }
+  .step-number {
+    font-size: 7.5pt;
+    letter-spacing: .08em;
+    color: #555;
+    margin-bottom: 3pt;
+  }
   .step-img { display: none; }
   .divider { border-color: #999; }
+
+  /* Tables / log sheets */
+  .temp-table,
+  .log-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .temp-table th,
+  .temp-table td,
+  .log-table th,
+  .log-table td {
+    border: .75pt solid #000;
+    padding: 4pt 6pt;
+  }
+  .temp-table thead,
+  .log-table thead { background: none !important; }
+
+  .temp-row {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Print-only fill-in fields */
+  .print-fields {
+    display: flex;
+    gap: 32pt;
+    margin: 10pt 0 18pt;
+    padding: 8pt 0;
+    border-top: .75pt solid #000;
+    border-bottom: .75pt solid #000;
+  }
+  .print-field {
+    display: flex;
+    flex-direction: column;
+    gap: 12pt;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: #555;
+    min-width: 90pt;
+  }
+  .print-field::after {
+    content: '';
+    display: block;
+    border-bottom: .75pt solid #000;
+    width: 100%;
+    margin-top: 2pt;
+  }
+
   a { color: #000; text-decoration: none; }
   .meta { display: none; }
 

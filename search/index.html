@@ -8,6 +8,7 @@
   <script src="../assets/auth.js"></script>
   <script>checkZone(2);</script>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="1402abf4-6ac0-4647-9e6c-a5e6dc020640"></script>
+  <script src="../assets/search-index.js"></script>
 </head>
 <body class="search-page">
 
@@ -121,398 +122,118 @@
 </footer>
 
 <script>
-// ── Search index ──────────────────────────────────────────────────────────────
-const INDEX = [
-  {
-    title: "Back of House",
-    url: "../back-of-house/index.html",
-    category: "BOH · Library",
-    excerpt: "Back of house service hub for kitchen checklists, food safety, core SOPs, recipes, and BOH role guides.",
-    keywords: ["back of house", "boh", "kitchen service", "line cook", "prep cook", "dishwasher", "opener", "closer", "recipes", "kitchen sop"]
-  },
-  {
-    title: "BOH Opening Checklist",
-    url: "../back-of-house/checklists/opening.html",
-    category: "BOH · Checklist",
-    excerpt: "Kitchen opening checklist for temperatures, morning setup, stock, storage, equipment, and BOH service readiness.",
-    keywords: ["boh opening", "kitchen opening", "back of house opening", "opening checklist", "line cook", "prep cook", "dishwasher", "opener"]
-  },
-  {
-    title: "BOH Closing Checklist",
-    url: "../back-of-house/checklists/closing.html",
-    category: "BOH · Checklist",
-    excerpt: "Kitchen close-down checklist for equipment shutdown, food storage, cleaning, dish reset, security, and handover notes.",
-    keywords: ["boh closing", "kitchen closing", "back of house closing", "closing checklist", "line cook", "prep cook", "dishwasher", "closer"]
-  },
-  {
-    title: "Front of House",
-    url: "../front-of-house/index.html",
-    category: "FOH · Library",
-    excerpt: "Front of house hub for guest service SOPs, opening and closing checklists, pre-service brief, server, host, and bartender role guides.",
-    keywords: ["front of house", "foh", "service", "server", "host", "bartender", "guest", "floor", "waiter", "waitress"]
-  },
-  {
-    title: "FOH Opening Checklist",
-    url: "../front-of-house/checklists/opening.html",
-    category: "FOH · Checklist",
-    excerpt: "Guest area, service station, booking, restroom, POS, and pre-open room checks for front of house.",
-    keywords: ["foh opening", "front of house opening", "opening checklist", "host stand", "menus", "restrooms", "pos", "service setup"]
-  },
-  {
-    title: "Pre-Service Brief",
-    url: "../front-of-house/checklists/pre-service.html",
-    category: "FOH · Checklist",
-    excerpt: "Pre-service agenda for covers, VIPs, allergies, specials, 86 items, roles, risks, and pacing.",
-    keywords: ["pre service", "brief", "lineup", "foh", "allergies", "specials", "86", "covers", "sections"]
-  },
-  {
-    title: "FOH Closing Checklist",
-    url: "../front-of-house/checklists/closing.html",
-    category: "FOH · Checklist",
-    excerpt: "Front of house close-down for tables, restrooms, service stations, glassware, cash-up, receipts, and handover notes.",
-    keywords: ["foh closing", "front of house closing", "closing checklist", "cash up", "receipts", "restrooms", "handover"]
-  },
-  {
-    title: "Greeting & Seating",
-    url: "../front-of-house/sops/greeting-seating.html",
-    category: "FOH · SOP",
-    excerpt: "Host standard for greeting guests, confirming reservations, seating to the table plan, and server handoff.",
-    keywords: ["greeting", "seating", "host", "door", "reservation", "walk in", "table plan", "guest arrival"]
-  },
-  {
-    title: "Table Service Sequence",
-    url: "../front-of-house/sops/table-service.html",
-    category: "FOH · SOP",
-    excerpt: "Server service sequence from first greet to drinks, food order, check-back, clearing, dessert, bill, and reset.",
-    keywords: ["table service", "server", "waiter", "greet", "order", "check back", "clear", "bill", "reset"]
-  },
-  {
-    title: "FOH Allergen Communication",
-    url: "../front-of-house/sops/allergen-communication.html",
-    category: "FOH · Critical",
-    excerpt: "Ask every table, confirm with kitchen, enter allergen notes in POS, and announce allergen dishes at delivery.",
-    keywords: ["foh allergen", "allergy", "allergen", "pos", "guest allergy", "server allergy", "kitchen confirmation"]
-  },
-  {
-    title: "Complaints & Recovery",
-    url: "../front-of-house/sops/complaints-recovery.html",
-    category: "FOH · SOP",
-    excerpt: "Service recovery standard: listen, identify the issue, offer next action, involve the manager, and document before close.",
-    keywords: ["complaint", "recovery", "guest issue", "manager", "comp", "discount", "bad service", "service recovery"]
-  },
-  {
-    title: "Payment & Cash-Up",
-    url: "../front-of-house/sops/payment-cashup.html",
-    category: "FOH · SOP",
-    excerpt: "Bill checks, table payment, split payments, cash handling, receipt filing, and end-of-night reconciliation.",
-    keywords: ["payment", "cash up", "cash-up", "bill", "receipt", "card", "split payment", "tips", "drawer"]
-  },
-  {
-    title: "Reservations & Waitlist",
-    url: "../front-of-house/sops/reservations-waitlist.html",
-    category: "FOH · SOP",
-    excerpt: "Booking notes, quoted wait times, table turns, guest handoffs, and waitlist communication.",
-    keywords: ["reservation", "waitlist", "booking", "host", "table turn", "wait time", "guest notes"]
-  },
-  {
-    title: "Server",
-    url: "../front-of-house/roles/server.html",
-    category: "FOH · Role",
-    excerpt: "Server role guide with table service, allergen communication, complaints and recovery, payment, and FOH checklists.",
-    keywords: ["server", "foh role", "waiter", "waitress", "section", "table service"]
-  },
-  {
-    title: "Host",
-    url: "../front-of-house/roles/host.html",
-    category: "FOH · Role",
-    excerpt: "Host role guide for greeting, seating, reservations, waitlist, allergen handoff, and FOH opening.",
-    keywords: ["host", "hostess", "door", "booking", "seating", "waitlist", "foh role"]
-  },
-  {
-    title: "Bartender",
-    url: "../front-of-house/roles/bartender.html",
-    category: "FOH · Role",
-    excerpt: "Bartender role guide for bar service, allergen communication, complaints, payment, cash-up, and FOH close.",
-    keywords: ["bartender", "bar", "drinks", "cocktail", "cash up", "foh role"]
-  },
-  {
-    title: "Server Onboarding",
-    url: "../onboarding/server.html",
-    category: "Onboarding · Server",
-    excerpt: "First-week reading path for new servers. Table service, allergen communication, service recovery, payment, and FOH checklists.",
-    keywords: ["server onboarding", "new hire", "server", "front of house", "foh", "training", "first week", "table service"]
-  },
-  {
-    title: "Host Onboarding",
-    url: "../onboarding/host.html",
-    category: "Onboarding · Host",
-    excerpt: "First-week reading path for new hosts. Greeting, seating, reservations, waitlist, allergen handoff, and FOH opening.",
-    keywords: ["host onboarding", "new hire", "host", "hostess", "front of house", "foh", "training", "first week", "reservations"]
-  },
-  {
-    title: "Bartender Onboarding",
-    url: "../onboarding/bartender.html",
-    category: "Onboarding · Bartender",
-    excerpt: "First-week reading path for new bartenders. Bar service, allergen communication, service recovery, payment, cash-up, and FOH close.",
-    keywords: ["bartender onboarding", "new hire", "bartender", "bar", "front of house", "foh", "training", "first week", "cash up"]
-  },
-  {
-    title: "SOP Library",
-    url: "../sops/index.html",
-    category: "SOP · Library",
-    excerpt: "Full SOP library with every kitchen and front of house procedure in one place, including hygiene, allergens, service, food safety, equipment, prep, storage, and dishwashing.",
-    keywords: ["sop library", "all sops", "procedures", "library", "sop", "all procedures", "kitchen procedures", "front of house procedures", "foh sops"]
-  },
-  {
-    title: "Handwashing Procedure",
-    url: "../sops/handwashing.html",
-    category: "SOP · Hygiene",
-    excerpt: "Correct technique and timing for handwashing. When to wash — between tasks, after handling raw protein, returning from a break, after touching your face or phone.",
-    keywords: ["wash", "hands", "hygiene", "soap", "20 seconds", "sink", "sanitise", "clean", "bacteria", "germs"]
-  },
-  {
-    title: "Allergen Quick Reference",
-    url: "../sops/allergen-quick-ref.html",
-    category: "SOP · Allergens",
-    excerpt: "The Big 9 allergens at a glance. Dish allergen matrix for the current menu. Five-step protocol for when a guest flags an allergy — stop, confirm, POS entry, clean preparation, pass call-out.",
-    keywords: ["allergen", "allergy", "big 9", "milk", "eggs", "fish", "shellfish", "tree nuts", "peanuts", "wheat", "soy", "sesame", "dish matrix", "guest allergy", "cross contact", "quick reference"]
-  },
-  {
-    title: "Allergen Handling",
-    url: "../sops/allergen-handling.html",
-    category: "SOP · Allergens",
-    excerpt: "Avoiding cross-contact with the Big 9 allergens. Celery, gluten, milk, eggs, fish, crustaceans, molluscs, nuts, peanuts, sesame, sulphites, lupin, mustard. Cross-contact vs cross-contamination.",
-    keywords: ["allergy", "allergen", "cross contact", "cross contamination", "big 9", "celery", "gluten", "milk", "nuts", "peanuts", "sesame", "mustard", "sulphites", "lupin", "intolerance", "anaphylaxis", "eggs", "fish"]
-  },
-  {
-    title: "Temperature Logging",
-    url: "../sops/temp-logging.html",
-    category: "SOP · Food Safety",
-    excerpt: "Fridge, freezer, and hot-hold temperature checks. Legal minimum requirements, logging frequency, and what to do when a reading is outside the safe range.",
-    keywords: ["temperature", "temp", "fridge", "freezer", "log", "probe", "thermometer", "5 degrees", "hot hold", "63", "danger zone", "food safety", "record", "logging"]
-  },
-  {
-    title: "Knife Safety & Storage",
-    url: "../sops/knife-safety.html",
-    category: "SOP · Equipment",
-    excerpt: "Safe storage, handling, and passing of knives. Magnetic strip, sheathing knives when not in use, and the correct way to pass a knife to another person.",
-    keywords: ["knife", "knives", "blade", "cut", "storage", "magnetic strip", "sheath", "pass", "handle", "sharp", "safe"]
-  },
-  {
-    title: "Cold Prep Setup",
-    url: "../sops/cold-prep-setup.html",
-    category: "SOP · Prep",
-    excerpt: "Station sanitisation before touching anything, colour-coded cutting boards by food type, date-labelling prepped items, and garnish station setup before service.",
-    keywords: ["prep", "station", "setup", "cutting board", "colour coded", "sanitise", "walk-in", "garnish", "label", "cold", "boards", "yellow", "red", "blue", "green", "white"]
-  },
-  {
-    title: "Dry Storage",
-    url: "../sops/dry-storage.html",
-    category: "SOP · Storage",
-    excerpt: "Organisation, labelling, and stock rotation in dry storage. FIFO — first in, first out. Nothing on the floor, nothing unlabelled, oldest stock to the front.",
-    keywords: ["storage", "dry store", "fifo", "first in first out", "rotation", "label", "stock", "pantry", "shelving", "floor", "date", "rotate"]
-  },
-  {
-    title: "Dish Machine Operation",
-    url: "../sops/dish-machine-operation.html",
-    category: "SOP · Dishwashing",
-    excerpt: "Machine startup checks, correct rack loading, minimum wash and rinse temperatures, and why items must air-dry rather than be towel-dried.",
-    keywords: ["dish machine", "dishwasher", "rack", "wash", "rinse", "temperature", "sanitise", "plates", "air dry", "glasswasher", "machine"]
-  },
-  {
-    title: "Fryer Startup & Shutdown",
-    url: "../sops/fryer-startup.html",
-    category: "SOP · Equipment",
-    excerpt: "Daily fryer startup sequence, oil temperature check, and correct shutdown procedure. Safety considerations before lighting and after service.",
-    keywords: ["fryer", "frying", "oil", "startup", "shutdown", "temperature", "heat", "deep fry", "fat", "fire", "light"]
-  },
-  {
-    title: "Grill Cleaning",
-    url: "../sops/grill-cleaning.html",
-    category: "SOP · Equipment",
-    excerpt: "End-of-service grill clean-down. The cooling window required before it is safe to clean, correct chemicals to use, and the correct sequence.",
-    keywords: ["grill", "cleaning", "clean", "close", "end of service", "hot plate", "char", "scrape", "chemical", "carbon", "griddle"]
-  },
-  {
-    title: "Three-Sink Sanitizing",
-    url: "../sops/three-sink-sanitizing.html",
-    category: "SOP · Dishwashing",
-    excerpt: "Manual wash, rinse, sanitize, and air-dry using the three-sink process. Chemical concentrations, what goes through the sinks vs the machine, and correct sequence.",
-    keywords: ["three sink", "3 sink", "sanitize", "sanitise", "wash rinse", "chemical", "concentration", "manual wash", "buckets", "manual"]
-  },
-  {
-    title: "Dish Area Closing",
-    url: "../sops/dish-area-closing.html",
-    category: "SOP · Dishwashing",
-    excerpt: "End-of-shift reset for the dish machine and dish pit. Draining, cleaning, and leaving the machine correctly so it is ready the next morning.",
-    keywords: ["dish area", "close", "closing", "drain", "clean", "reset", "end of shift", "dish pit", "machine", "dishwasher"]
-  },
-  {
-    title: "Opening Checklists",
-    url: "../checklists/opening.html",
-    category: "Checklist · Opening",
-    excerpt: "Opening checklist selector for BOH, FOH, pre-service brief, and role-by-role opening responsibilities.",
-    keywords: ["opening", "checklists", "morning", "open", "setup", "boh", "foh", "roles", "line cook", "server", "host", "bartender"]
-  },
-  {
-    title: "Closing Checklists",
-    url: "../checklists/closing.html",
-    category: "Checklist · Closing",
-    excerpt: "Closing checklist selector for BOH, FOH, payment cash-up, and role-by-role closing responsibilities.",
-    keywords: ["closing", "checklists", "close", "end of service", "boh", "foh", "roles", "cash up", "server", "dishwasher", "closer"]
-  },
-  {
-    title: "Team Guides",
-    url: "../roles/index.html",
-    category: "Role · Directory",
-    excerpt: "Directory for all BOH and FOH role guides, shift ownership roles, service hubs, and new hire paths.",
-    keywords: ["team guides", "roles", "role guides", "team", "staff", "line cook", "prep cook", "dishwasher", "server", "host", "bartender", "opener", "closer"]
-  },
-  {
-    title: "Line Cook",
-    url: "../roles/line-cook.html",
-    category: "Role",
-    excerpt: "All SOPs and checklists for the line cook position. Knife safety, allergen handling, fryer startup, grill cleaning, temperature logging, and the opening checklist.",
-    keywords: ["line cook", "role", "service", "station", "cook", "kitchen", "cook role"]
-  },
-  {
-    title: "Prep Cook",
-    url: "../roles/prep-cook.html",
-    category: "Role",
-    excerpt: "All SOPs and checklists for the prep cook position. Handwashing, knife safety, cold prep setup, allergen handling, dry storage, and opening checklist.",
-    keywords: ["prep cook", "prep", "role", "kitchen", "chopping", "portioning", "prep role"]
-  },
-  {
-    title: "Opener",
-    url: "../roles/opener.html",
-    category: "Role",
-    excerpt: "All SOPs and checklists for the opening shift. Temperature logging, fryer startup, cold prep setup, dry storage, and the opening checklist.",
-    keywords: ["opener", "opening", "role", "morning", "start", "setup", "opener role"]
-  },
-  {
-    title: "Closer",
-    url: "../roles/closer.html",
-    category: "Role",
-    excerpt: "All SOPs and checklists for the closing shift. Grill cleaning, temperature logging, dry storage, knife safety, and the closing checklist.",
-    keywords: ["closer", "closing", "role", "end", "night", "close", "closer role"]
-  },
-  {
-    title: "Dishwasher",
-    url: "../roles/dishwasher.html",
-    category: "Role",
-    excerpt: "All SOPs and checklists for the dish area. Dish machine operation, three-sink sanitizing, dish area closing, dry storage, and the closing checklist.",
-    keywords: ["dishwasher", "dish", "washing", "role", "machine", "sanitize", "pit", "dish role"]
-  },
-  {
-    title: "Food Safety",
-    url: "../food-safety/index.html",
-    category: "Reference",
-    excerpt: "Critical food safety temperatures, the danger zone, storage rules, allergen reference, and legal compliance information.",
-    keywords: ["food safety", "temperature", "danger zone", "compliance", "legal", "haccp", "safe", "storage", "allergen", "critical"]
-  },
-  {
-    title: "Recipe Library",
-    url: "../recipes/index.html",
-    category: "Recipe · Library",
-    excerpt: "Full restaurant recipe collection with mains, starters, sides, desserts, allergens, prep, pickup, plating, and storage standards.",
-    keywords: ["recipe", "recipes", "recipe library", "menu", "dish", "dishes", "prep", "pickup", "plating", "all recipes"]
-  },
-  {
-    title: "Braised Beef Short Rib",
-    url: "../recipes/braised-short-rib.html",
-    category: "Recipe · Mains",
-    excerpt: "8 portions. Bone-in beef short rib braised at 300°F for 3.5 hours with creamed potato and braising jus. Allergens: celery, gluten, milk, sulphites. Plating photo included.",
-    keywords: ["short rib", "beef", "braise", "braised", "recipe", "mains", "potato", "jus", "celery", "gluten", "milk", "sulphites", "portion", "creamed potato", "bembridges", "plating"]
-  },
-  {
-    title: "Pan-Roasted Chicken",
-    url: "../recipes/pan-roasted-chicken.html",
-    category: "Recipe · Mains",
-    excerpt: "10 portions. Chicken supreme with carrot puree, seasonal greens, and thyme jus. Pickup, cook temperature, allergens, and storage.",
-    keywords: ["chicken", "supreme", "pan roasted", "main", "mains", "carrot puree", "greens", "thyme jus", "milk", "sulphites", "recipe", "pickup"]
-  },
-  {
-    title: "Seared Sea Bass",
-    url: "../recipes/seared-sea-bass.html",
-    category: "Recipe · Mains",
-    excerpt: "10 portions. Sea bass with crushed potatoes, fennel, dill, and lemon beurre blanc. Fish, milk, and sulphites allergen reference.",
-    keywords: ["sea bass", "fish", "seared", "fennel", "beurre blanc", "potatoes", "dill", "mains", "milk", "sulphites", "recipe"]
-  },
-  {
-    title: "Burrata & Tomato",
-    url: "../recipes/burrata-tomato.html",
-    category: "Recipe · Starter",
-    excerpt: "8 portions. Burrata with marinated tomatoes, basil oil, sherry vinaigrette, and toasted sourdough.",
-    keywords: ["burrata", "tomato", "starter", "cold", "basil oil", "sourdough", "milk", "gluten", "sulphites", "recipe"]
-  },
-  {
-    title: "Triple-Cooked Chips",
-    url: "../recipes/triple-cooked-chips.html",
-    category: "Recipe · Side",
-    excerpt: "12 portions. Thick-cut chips simmered, blanched, chilled, and fried to order at 180 degrees.",
-    keywords: ["chips", "fries", "triple cooked", "side", "potato", "fryer", "180", "recipe", "no allergens"]
-  },
-  {
-    title: "Lemon Posset",
-    url: "../recipes/lemon-posset.html",
-    category: "Recipe · Dessert",
-    excerpt: "12 portions. Set lemon cream with berry compote and shortbread crumb. Milk and gluten allergen reference.",
-    keywords: ["lemon posset", "posset", "dessert", "cream", "berry", "compote", "shortbread", "milk", "gluten", "recipe"]
-  },
-  {
-    title: "Line Cook — Your First Week",
-    url: "../onboarding/line-cook.html",
-    category: "Onboarding · Line Cook",
-    excerpt: "Day-by-day reading path for new line cooks. What to read before your first shift, what to confirm with your trainer on day one, station setup on day two, and the sign-off form.",
-    keywords: ["onboarding", "new hire", "first week", "training", "line cook", "new", "start", "induction", "reading path", "sign off"]
-  },
-  {
-    title: "Prep Cook — Your First Week",
-    url: "../onboarding/prep-cook.html",
-    category: "Onboarding · Prep Cook",
-    excerpt: "Day-by-day reading path for new prep cooks. Labelling and board discipline before shift one, cold prep setup and dry storage on day two, and the sign-off form.",
-    keywords: ["onboarding", "new hire", "first week", "training", "prep cook", "new", "start", "induction", "reading path", "sign off"]
-  },
-  {
-    title: "Opener — Your First Week",
-    url: "../onboarding/opener.html",
-    category: "Onboarding · Opener",
-    excerpt: "Day-by-day reading path for new openers. Temperature logging and dry storage before shift one, fryer and cold prep on day two, the opening checklist on day three.",
-    keywords: ["onboarding", "new hire", "first week", "training", "opener", "opening", "new", "start", "induction", "reading path", "sign off"]
-  },
-  {
-    title: "Closer — Your First Week",
-    url: "../onboarding/closer.html",
-    category: "Onboarding · Closer",
-    excerpt: "Day-by-day reading path for new closers. Grill cleaning and knife storage before shift one, temperature logging and dry storage on day two, the closing checklist on day three.",
-    keywords: ["onboarding", "new hire", "first week", "training", "closer", "closing", "new", "start", "induction", "reading path", "sign off"]
-  },
-  {
-    title: "Dishwasher — Your First Week",
-    url: "../onboarding/dishwasher.html",
-    category: "Onboarding · Dishwasher",
-    excerpt: "Day-by-day reading path for new dishwashers. Machine operation before shift one, three-sink sanitizing on day two, dish area closing and dry storage on day three.",
-    keywords: ["onboarding", "new hire", "first week", "training", "dishwasher", "dish", "new", "start", "induction", "reading path", "sign off"]
-  },
-  {
-    title: "Crisis Reference",
-    url: "../crisis/index.html",
-    category: "Reference",
-    excerpt: "Mid-service crisis guide. Oil fire, burn injury, laceration, allergy flag after ordering, customer unwell, fridge out of range, cross-contamination, equipment failure, power outage.",
-    keywords: ["crisis", "emergency", "fire", "burn", "injury", "allergy", "allergen", "fridge", "equipment", "power", "911", "urgent", "accident", "unwell", "food poisoning", "cross contamination", "laceration", "cut", "slip", "fall", "power outage"]
+// INDEX is loaded from ../assets/search-index.js
+// To rebuild after adding pages: node tools/build-search-index.js
+
+// ── Stemmer ───────────────────────────────────────────────────────────────────
+// Reduces inflected forms to a common root so "allergies" matches "allergy", etc.
+function stem(word) {
+  if (word.length <= 3) return word;
+  if (word.endsWith('ies'))  return word.slice(0, -3) + 'y';
+  if (word.endsWith('ying')) return word.slice(0, -4) + 'y';
+  if (word.endsWith('ness')) return word.slice(0, -4);
+  if (word.endsWith('ment')) return word.slice(0, -4);
+  if (word.endsWith('tion')) return word.slice(0, -4);
+  if (word.endsWith('ing'))  return word.slice(0, -3);
+  if (word.endsWith('ed'))   return word.slice(0, -2);
+  if (word.endsWith('ers'))  return word.slice(0, -3);
+  if (word.endsWith('er'))   return word.slice(0, -2);
+  if (word.endsWith('ly'))   return word.slice(0, -2);
+  if (word.endsWith('s') && !word.endsWith('ss')) return word.slice(0, -1);
+  return word;
+}
+
+// ── Synonym map ───────────────────────────────────────────────────────────────
+// Restaurant-specific terms that staff might use that differ from indexed terms.
+const SYNONYMS = {
+  'allergies':       ['allergen', 'allergy'],
+  'allergic':        ['allergen', 'allergy'],
+  'intolerance':     ['allergen', 'allergy'],
+  'anaphylaxis':     ['allergen', 'allergy', 'emergency'],
+  'washing':         ['handwash', 'wash', 'hygiene'],
+  'sick':            ['unwell', 'illness', 'health', 'employee health'],
+  'ill':             ['unwell', 'sick', 'illness'],
+  'illness':         ['sick', 'unwell', 'employee health'],
+  'injured':         ['injury', 'laceration', 'burn', 'cut'],
+  'hurt':            ['injury', 'burn', 'cut', 'laceration'],
+  'blood':           ['laceration', 'injury', 'cut', 'knife'],
+  'accident':        ['injury', 'crisis', 'emergency'],
+  'training':        ['onboarding', 'new hire', 'induction', 'first week'],
+  'new staff':       ['onboarding', 'new hire'],
+  'new employee':    ['onboarding', 'new hire'],
+  'new starter':     ['onboarding', 'new hire', 'first week'],
+  'first day':       ['onboarding', 'first week', 'new hire'],
+  'induction':       ['onboarding', 'new hire', 'first week'],
+  'failure':         ['broken', 'malfunction', 'out of range', 'equipment'],
+  'broken':          ['failure', 'malfunction', 'equipment'],
+  'malfunction':     ['failure', 'broken', 'equipment'],
+  'down':            ['failure', 'broken', 'out of range'],
+  'outage':          ['power', 'failure', 'crisis'],
+  'temps':           ['temperature', 'temp', 'thermometer'],
+  'cold':            ['fridge', 'freezer', 'temperature', 'refrigerator'],
+  'fridge':          ['refrigerator', 'cold storage', 'temperature'],
+  'refrigerator':    ['fridge', 'cold storage'],
+  'freezer':         ['fridge', 'temperature', 'cold'],
+  'sanitizing':      ['sanitise', 'sanitize', 'three sink', 'cleaning'],
+  'sanitising':      ['sanitise', 'sanitize', 'three sink', 'cleaning'],
+  'cleaning':        ['clean', 'sanitise', 'sanitize', 'hygiene'],
+  'cleanliness':     ['clean', 'hygiene', 'sanitise'],
+  'waiter':          ['server', 'table service', 'foh'],
+  'waitress':        ['server', 'table service', 'foh'],
+  'floor staff':     ['server', 'host', 'foh'],
+  'front desk':      ['host', 'reception', 'greeting'],
+  'kitchen staff':   ['line cook', 'prep cook', 'boh'],
+  'kitchen team':    ['line cook', 'prep cook', 'boh'],
+  'complaint':       ['complaints', 'recovery', 'service recovery'],
+  'complaints':      ['recovery', 'service recovery', 'complaint'],
+  'emergency':       ['crisis', 'fire', 'injury', '911'],
+  'fire':            ['emergency', 'crisis', 'evacuation', 'fryer'],
+  'evacuation':      ['fire', 'emergency', 'crisis'],
+  'chips':           ['fries', 'potato', 'triple cooked', 'fryer'],
+  'fries':           ['chips', 'potato', 'triple cooked', 'fryer'],
+  'beef':            ['short rib', 'braised'],
+  'fish':            ['sea bass', 'allergen'],
+  'dessert':         ['posset', 'pudding', 'lemon posset', 'sweet'],
+  'pudding':         ['dessert', 'posset', 'lemon posset'],
+  'sweet':           ['dessert', 'pudding', 'posset'],
+  'payment':         ['cash up', 'bill', 'receipt'],
+  'cashup':          ['cash up', 'payment', 'bill'],
+  'tips':            ['payment', 'cash up'],
+  'rota':            ['schedule', 'roles', 'shift'],
+  'schedule':        ['rota', 'roles', 'opening', 'closing'],
+  'rules':           ['sop', 'procedure', 'policy'],
+  'procedure':       ['sop', 'rules', 'policy'],
+  'policy':          ['sop', 'rules', 'procedure', 'employee health'],
+  'checklist':       ['opening', 'closing', 'checklists'],
+  'checklists':      ['opening', 'closing', 'checklist'],
+  'poisoning':       ['food poisoning', 'unwell', 'allergen', 'crisis'],
+};
+
+// Expand query terms with stemmed variants and synonyms.
+function expandTerms(terms) {
+  const expanded = new Set(terms);
+  for (const term of terms) {
+    const s = stem(term);
+    if (s !== term && s.length > 2) expanded.add(s);
+    for (const syn of (SYNONYMS[term] || [])) expanded.add(syn);
+    for (const syn of (SYNONYMS[s]    || [])) expanded.add(syn);
   }
-];
+  return [...expanded];
+}
+
 
 // ── Search logic ──────────────────────────────────────────────────────────────
 function score(item, terms, phrase) {
   let s = 0;
-  const t = item.title.toLowerCase();
-  const c = item.category.toLowerCase();
-  const e = item.excerpt.toLowerCase();
+  const t  = item.title.toLowerCase();
+  const c  = item.category.toLowerCase();
+  const e  = item.excerpt.toLowerCase();
   const kw = item.keywords.map(k => k.toLowerCase());
+  const b  = (item.body || '').toLowerCase();
 
-  if (t.includes(phrase)) s += 25;
-  if (kw.some(k => k === phrase)) s += 15;
+  if (t === phrase)                    s += 30;
+  else if (t.includes(phrase))         s += 25;
+  if (kw.some(k => k === phrase))      s += 15;
 
   for (const term of terms) {
     if (term.length < 2) continue;
@@ -520,6 +241,7 @@ function score(item, terms, phrase) {
     if (kw.some(k => k.includes(term))) s += 6;
     if (c.includes(term))               s += 4;
     if (e.includes(term))               s += 2;
+    if (b && b.includes(term))          s += 1;
   }
   return s;
 }
@@ -532,11 +254,12 @@ function highlight(text, terms) {
 }
 
 function runSearch(raw) {
-  const phrase = raw.toLowerCase().trim();
-  const terms = phrase.split(/\s+/).filter(t => t.length >= 2);
+  const phrase   = raw.toLowerCase().trim();
   if (!phrase) return [];
+  const terms    = phrase.split(/\s+/).filter(t => t.length >= 2);
+  const expanded = expandTerms(terms);
   return INDEX
-    .map(item => ({ item, s: score(item, terms, phrase) }))
+    .map(item => ({ item, s: score(item, expanded, phrase) }))
     .filter(({ s }) => s > 0)
     .sort((a, b) => b.s - a.s)
     .map(({ item }) => item);
@@ -553,6 +276,7 @@ const clear   = document.getElementById('search-clear');
 
 function render(query) {
   const phrase = query.trim();
+  // Highlight uses original terms only — not expanded ones — so marks stay intuitive
   const terms  = phrase.toLowerCase().split(/\s+/).filter(t => t.length >= 2);
 
   if (!phrase) {
