@@ -90,23 +90,41 @@
 </nav>
 
 <main>
-  <div class="wrap">
+  <div class="wrap check-doc">
 
-    <div class="page-header">
-      <h1>Sanitizer Concentration Log</h1>
-      <div class="meta">
-        <span><span class="meta-dot"></span> Role: All Kitchen Staff</span>
-        <span><span class="meta-dot"></span> Updated: May 2026</span>
-        <span><span class="meta-dot"></span> Category: Food Safety Record</span>
+    <div class="sop-reference-bar">
+      <div>Staff Ready Ops. <span>Checklist</span></div>
+      <div>Log</div>
+    </div>
+
+    <p class="sop-kicker">Food Safety &middot; Log</p>
+    <h1 class="check-title">Sanitizer Concentration Log</h1>
+
+    <div class="check-status-grid" aria-label="Checklist details">
+      <div class="check-status-card">
+        <span class="label">Area</span>
+        <span class="value">Food Safety</span>
+      </div>
+      <div class="check-status-card">
+        <span class="label">Owner</span>
+        <span class="value">Shift Lead</span>
+      </div>
+      <div class="check-status-card">
+        <span class="label">Due</span>
+        <span class="value">When check is completed</span>
       </div>
     </div>
+
     <div class="print-fields"><span class="print-field">Date</span><span class="print-field">Shift</span><span class="print-field">Signed by</span></div>
 
+    <p class="check-summary">Test your solution, then log the result via the form below. Test at the start of each shift, every 2 hours during service, and whenever a fresh batch is made. Every submission is timestamped and saved to the manager's Google Sheet.</p>
 
-    <p style="color:var(--text-muted);font-size:.95rem;line-height:1.78;margin-bottom:32px;">Test your solution, then log the result via the form below. Test at the start of each shift, every 2 hours during service, and whenever a fresh batch is made. Every submission is timestamped and saved to the manager's Google Sheet.</p>
-
-    <div class="section-label">Concentration Reference</div>
-    <div class="temp-table" style="margin-bottom:28px;">
+    <section class="check-section">
+      <div class="check-section-heading">
+        <h2>Concentration Reference</h2>
+        <span class="check-section-tag">Reference</span>
+      </div>
+      <div class="temp-table">
       <div class="temp-row header">
         <div>Sanitizer type</div>
         <div>Acceptable range</div>
@@ -120,27 +138,51 @@
         <div class="temp-value">200&ndash;400 ppm</div>
       </div>
     </div>
+    </section>
 
-    <div class="section-label">Have These Details Ready Before You Submit</div>
-    <div class="checklist-preview">
-      <div class="checklist-category">
-        <div class="checklist-item">Date and time of the test</div>
-        <div class="checklist-item">Location — three-sink, spray bottle, or other</div>
-        <div class="checklist-item">Sanitizer type — chlorine or quaternary ammonium (quat)</div>
-        <div class="checklist-item">ppm reading from the test strip</div>
-        <div class="checklist-item">Pass or fail result</div>
-        <div class="checklist-item">Action taken if the test failed — discarded and remade, retested</div>
-        <div class="checklist-item">Your initials</div>
+    <section class="check-section">
+      <div class="check-section-heading">
+        <h2>Have These Details Ready Before You Submit</h2>
+        <span class="check-section-tag">Check</span>
       </div>
+      <div class="check-items">
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Have These Details Ready Before You Submit</strong><span>Date and time of the test</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Have These Details Ready Before You Submit</strong><span>Location — three-sink, spray bottle, or other</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Have These Details Ready Before You Submit</strong><span>Sanitizer type — chlorine or quaternary ammonium (quat)</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Have These Details Ready Before You Submit</strong><span>ppm reading from the test strip</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Have These Details Ready Before You Submit</strong><span>Pass or fail result</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Have These Details Ready Before You Submit</strong><span>Action taken if the test failed — discarded and remade, retested</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Have These Details Ready Before You Submit</strong><span>Your initials</span></span>
+        </label>
+      </div>
+    </section>
+
+    <div class="check-actions">
+      <a  class="btn btn-arrow" href="#" target="_blank" rel="noopener">Submit Sanitizer Test Result</a>
     </div>
 
-    
-    <button class="print-btn" onclick="window.print()">Print this page</button>
-    <a class="btn btn-arrow" href="#" target="_blank" rel="noopener" style="margin-top:8px;">Submit Sanitizer Test Result</a>
-    <p style="margin-top:18px;font-size:.8rem;color:var(--text-muted);line-height:1.68;">Submissions are logged automatically in the manager's Google Sheet. Submit once per test — not once per shift.</p>
-
     <div class="related">
-      <h2>Related</h2>
+      <h2>Related Checklists</h2>
       <div class="related-links">
         <a href="../sops/sanitizer-testing.html">Sanitizer Testing SOP</a>
         <a href="../sops/three-sink-sanitizing.html">Three-Sink Sanitizing</a>

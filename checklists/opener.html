@@ -74,93 +74,213 @@
 </nav>
 
 <main>
-  <div class="wrap">
+  <div class="wrap check-doc">
 
-    <div class="page-header">
-      <h1>Opener Checklist</h1>
-      <div class="meta">
-        <span><span class="meta-dot"></span> Role: Opener</span>
-        <span><span class="meta-dot"></span> Updated: May 2026</span>
-        <span><span class="meta-dot"></span> Category: BOH Operations</span>
+    <div class="sop-reference-bar">
+      <div>Staff Ready Ops. <span>Checklist</span></div>
+      <div>Shift</div>
+    </div>
+
+    <p class="sop-kicker">Role Checklist &middot; Shift</p>
+    <h1 class="check-title">Opener Checklist</h1>
+
+    <div class="check-status-grid" aria-label="Checklist details">
+      <div class="check-status-card">
+        <span class="label">Area</span>
+        <span class="value">Role Checklist</span>
+      </div>
+      <div class="check-status-card">
+        <span class="label">Owner</span>
+        <span class="value">Opener</span>
+      </div>
+      <div class="check-status-card">
+        <span class="label">Due</span>
+        <span class="value">End of shift</span>
       </div>
     </div>
 
-    <p style="color:var(--text-muted);font-size:.95rem;line-height:1.78;margin-bottom:36px;">The opener owns the kitchen before anyone else is in it. Food safety checks come first — before any prep begins. Work through every section in order, then submit the checklist before service starts.</p>
+    <div class="print-fields"><span class="print-field">Date</span><span class="print-field">Shift</span><span class="print-field">Signed by</span></div>
 
-    <div class="section-label">1. Food Safety — Do These First</div>
-    <div class="checklist-preview">
-      <div class="checklist-category">
-        <h3>Temperature Checks</h3>
-        <div class="checklist-item">Calibrate probe thermometer using the ice-point method — must read 32&deg;F &plusmn;2&deg;F</div>
-        <div class="checklist-item">Log fridge temperature — must be &le; 41&deg;F. If above 46&deg;F, do not use food inside. Alert manager immediately.</div>
-        <div class="checklist-item">Probe-check a dense item on the middle fridge shelf — core must also read &le; 41&deg;F</div>
-        <div class="checklist-item">Log freezer temperature — must be &le; 0&deg;F. If above 5&deg;F, notify manager before service.</div>
-        <div class="checklist-item">Submit daily temperature log via the form below before service starts</div>
+    <p class="check-summary">The opener owns the kitchen before anyone else is in it. Food safety checks come first — before any prep begins. Work through every section in order, then submit the checklist before service starts.</p>
+
+    <section class="check-section">
+      <div class="check-section-heading">
+        <h2>1. Food Safety — Do These First</h2>
+        <span class="check-section-tag">Check</span>
       </div>
-      <div class="checklist-category">
-        <h3>Receiving (Delivery Days Only)</h3>
-        <div class="checklist-item">Inspect delivery vehicle and driver documentation before unloading</div>
-        <div class="checklist-item">Check all packaging — reject anything torn, wet, or with compromised seals</div>
-        <div class="checklist-item">Probe chilled goods — reject anything arriving above 46&deg;F</div>
-        <div class="checklist-item">Check all use-by dates — reject any item with missing or expired date</div>
-        <div class="checklist-item">Store accepted goods FIFO — new stock behind old stock</div>
-        <div class="checklist-item">Submit receiving log via the form link below</div>
+      <div class="check-items">
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Temperature Checks</strong><span>Calibrate probe thermometer using the ice-point method — must read 32&deg;F &plusmn;2&deg;F</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Temperature Checks</strong><span>Log fridge temperature — must be &le; 41&deg;F. If above 46&deg;F, do not use food inside. Alert manager immediately.</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Temperature Checks</strong><span>Probe-check a dense item on the middle fridge shelf — core must also read &le; 41&deg;F</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Temperature Checks</strong><span>Log freezer temperature — must be &le; 0&deg;F. If above 5&deg;F, notify manager before service.</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Temperature Checks</strong><span>Submit daily temperature log via the form below before service starts</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Receiving (Delivery Days Only)</strong><span>Inspect delivery vehicle and driver documentation before unloading</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Receiving (Delivery Days Only)</strong><span>Check all packaging — reject anything torn, wet, or with compromised seals</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Receiving (Delivery Days Only)</strong><span>Probe chilled goods — reject anything arriving above 46&deg;F</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Receiving (Delivery Days Only)</strong><span>Check all use-by dates — reject any item with missing or expired date</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Receiving (Delivery Days Only)</strong><span>Store accepted goods FIFO — new stock behind old stock</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Receiving (Delivery Days Only)</strong><span>Submit receiving log via the form link below</span></span>
+        </label>
       </div>
+    </section>
+
+    <section class="check-section">
+      <div class="check-section-heading">
+        <h2>2. Date Label Audit</h2>
+        <span class="check-section-tag">Check</span>
+      </div>
+      <div class="check-items">
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>2. Date Label Audit</strong><span>Check every labelled item in the fridge — remove and discard anything past its use-by date</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>2. Date Label Audit</strong><span>Any unlabelled food found must be discarded immediately — do not guess the date</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>2. Date Label Audit</strong><span>Re-label any items whose labels are illegible or missing a use-by date</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>2. Date Label Audit</strong><span>Log any discards with item name and reason in the corrective action field on the temp log</span></span>
+        </label>
+      </div>
+    </section>
+
+    <section class="check-section">
+      <div class="check-section-heading">
+        <h2>3. Kitchen Setup</h2>
+        <span class="check-section-tag">Check</span>
+      </div>
+      <div class="check-items">
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Hygiene &amp; Safety</strong><span>Wash hands before touching anything in the kitchen</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Hygiene &amp; Safety</strong><span>Handwashing sink stocked — soap, paper towels, running hot water confirmed</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Hygiene &amp; Safety</strong><span>Blue detectable plasters available at the handwashing sink</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Hygiene &amp; Safety</strong><span>Sanitize all cutting boards and prep surfaces before use</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Hygiene &amp; Safety</strong><span>Test sanitizer solution with test strip — log result; chlorine 100–200 ppm, quat 200–400 ppm</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Equipment</strong><span>Start fryer preheat — target 350&deg;F before service</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Equipment</strong><span>Confirm probe thermometer is available at the pass and sanitized</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Equipment</strong><span>Confirm all knives are on the magnetic strip — none left on surfaces</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Equipment</strong><span>Check bin liners are in place in all bins</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Prep &amp; Stock</strong><span>Pull protein for first service — confirm it is within date and correctly stored</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Prep &amp; Stock</strong><span>Set up garnish station with labelled, dated items</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Prep &amp; Stock</strong><span>Check dry storage — nothing on the floor, FIFO rotation in place</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Prep &amp; Stock</strong><span>Confirm pass is clean, clear, and ready</span></span>
+        </label>
+      </div>
+    </section>
+
+    <section class="check-section">
+      <div class="check-section-heading">
+        <h2>4. Team Handoff</h2>
+        <span class="check-section-tag">Check</span>
+      </div>
+      <div class="check-items">
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>4. Team Handoff</strong><span>Brief each station on their prep priorities and first service deadlines</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>4. Team Handoff</strong><span>Communicate the 86 list, allergen flags, and today's specials to all kitchen staff</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>4. Team Handoff</strong><span>Confirm fryer has reached 350&deg;F before first ticket is called</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>4. Team Handoff</strong><span>Escalate any equipment issues, missing stock, or food safety concerns to manager before service</span></span>
+        </label>
+      </div>
+    </section>
+
+    <section class="check-section">
+      <div class="check-section-heading">
+        <h2>Submit Checklist</h2>
+        <span class="check-section-tag">Note</span>
+      </div>
+      <p class="check-note">Submit before service starts. The form is timestamped and logged automatically in the manager's Google Sheet. Also submit the daily temperature log and receiving log (if a delivery arrived) using the links below.</p>
+    </section>
+
+    <div class="check-actions">
+      <a  class="btn btn-arrow" href="https://docs.google.com/forms/d/e/1FAIpQLSeA_tj9ogC8y61OTEghrYoq4So_Q968zcC81XjxmvTPMMsByA/viewform?usp=publish-editor" target="_blank" rel="noopener">Submit Opener Checklist</a>
     </div>
-
-    <div class="section-label">2. Date Label Audit</div>
-    <div class="checklist-preview">
-      <div class="checklist-category">
-        <div class="checklist-item">Check every labelled item in the fridge — remove and discard anything past its use-by date</div>
-        <div class="checklist-item">Any unlabelled food found must be discarded immediately — do not guess the date</div>
-        <div class="checklist-item">Re-label any items whose labels are illegible or missing a use-by date</div>
-        <div class="checklist-item">Log any discards with item name and reason in the corrective action field on the temp log</div>
-      </div>
-    </div>
-
-    <div class="section-label">3. Kitchen Setup</div>
-    <div class="checklist-preview">
-      <div class="checklist-category">
-        <h3>Hygiene &amp; Safety</h3>
-        <div class="checklist-item">Wash hands before touching anything in the kitchen</div>
-        <div class="checklist-item">Handwashing sink stocked — soap, paper towels, running hot water confirmed</div>
-        <div class="checklist-item">Blue detectable plasters available at the handwashing sink</div>
-        <div class="checklist-item">Sanitize all cutting boards and prep surfaces before use</div>
-        <div class="checklist-item">Test sanitizer solution with test strip — log result; chlorine 100–200 ppm, quat 200–400 ppm</div>
-      </div>
-      <div class="checklist-category">
-        <h3>Equipment</h3>
-        <div class="checklist-item">Start fryer preheat — target 350&deg;F before service</div>
-        <div class="checklist-item">Confirm probe thermometer is available at the pass and sanitized</div>
-        <div class="checklist-item">Confirm all knives are on the magnetic strip — none left on surfaces</div>
-        <div class="checklist-item">Check bin liners are in place in all bins</div>
-      </div>
-      <div class="checklist-category">
-        <h3>Prep &amp; Stock</h3>
-        <div class="checklist-item">Pull protein for first service — confirm it is within date and correctly stored</div>
-        <div class="checklist-item">Set up garnish station with labelled, dated items</div>
-        <div class="checklist-item">Check dry storage — nothing on the floor, FIFO rotation in place</div>
-        <div class="checklist-item">Confirm pass is clean, clear, and ready</div>
-      </div>
-    </div>
-
-    <div class="section-label">4. Team Handoff</div>
-    <div class="checklist-preview">
-      <div class="checklist-category">
-        <div class="checklist-item">Brief each station on their prep priorities and first service deadlines</div>
-        <div class="checklist-item">Communicate the 86 list, allergen flags, and today's specials to all kitchen staff</div>
-        <div class="checklist-item">Confirm fryer has reached 350&deg;F before first ticket is called</div>
-        <div class="checklist-item">Escalate any equipment issues, missing stock, or food safety concerns to manager before service</div>
-      </div>
-    </div>
-
-    <div class="section-label">Submit Checklist</div>
-    <p style="color:var(--text-muted);font-size:.95rem;line-height:1.78;margin-bottom:24px;">Submit before service starts. The form is timestamped and logged automatically in the manager's Google Sheet.</p>
-    <a class="btn btn-arrow" href="https://docs.google.com/forms/d/e/1FAIpQLSeA_tj9ogC8y61OTEghrYoq4So_Q968zcC81XjxmvTPMMsByA/viewform?usp=publish-editor" target="_blank" rel="noopener">Submit Opener Checklist</a>
-    <p style="margin-top:18px;font-size:.8rem;color:var(--text-muted);line-height:1.68;">Also submit the daily temperature log and receiving log (if a delivery arrived) using the links below.</p>
 
     <div class="related">
-      <h2>Related</h2>
+      <h2>Related Checklists</h2>
       <div class="related-links">
         <a href="temp-log.html">Daily Temperature Log</a>
         <a href="receiving-log.html">Receiving Log</a>

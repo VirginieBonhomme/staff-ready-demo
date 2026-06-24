@@ -88,37 +88,82 @@
 </nav>
 
 <main>
-  <div class="wrap">
+  <div class="wrap check-doc">
 
-    <div class="page-header">
-      <h1>Receiving Log</h1>
-      <div class="meta">
-        <span><span class="meta-dot"></span> Role: Opener / Manager</span>
-        <span><span class="meta-dot"></span> Updated: May 2026</span>
-        <span><span class="meta-dot"></span> Category: Food Safety Record</span>
+    <div class="sop-reference-bar">
+      <div>Staff Ready Ops. <span>Checklist</span></div>
+      <div>Log</div>
+    </div>
+
+    <p class="sop-kicker">Food Safety &middot; Log</p>
+    <h1 class="check-title">Receiving Log</h1>
+
+    <div class="check-status-grid" aria-label="Checklist details">
+      <div class="check-status-card">
+        <span class="label">Area</span>
+        <span class="value">Food Safety</span>
+      </div>
+      <div class="check-status-card">
+        <span class="label">Owner</span>
+        <span class="value">Shift Lead</span>
+      </div>
+      <div class="check-status-card">
+        <span class="label">Due</span>
+        <span class="value">When check is completed</span>
       </div>
     </div>
+
     <div class="print-fields"><span class="print-field">Date</span><span class="print-field">Shift</span><span class="print-field">Signed by</span></div>
 
+    <p class="check-summary">Inspect the delivery first, then log each item via the form below. Every submission is timestamped and saved to the manager's Google Sheet — no paper required.</p>
 
-    <p style="color:var(--text-muted);font-size:.95rem;line-height:1.78;margin-bottom:32px;">Inspect the delivery first, then log each item via the form below. Every submission is timestamped and saved to the manager's Google Sheet — no paper required.</p>
-
-    <div class="section-label">Have These Details Ready Before You Submit</div>
-    <div class="checklist-preview">
-      <div class="checklist-category">
-        <div class="checklist-item">Supplier name and delivery time</div>
-        <div class="checklist-item">Items or categories received (e.g. fresh protein, dairy, dry goods)</div>
-        <div class="checklist-item">Probe temperature of each chilled category</div>
-        <div class="checklist-item">Packaging condition — damaged, intact, or compromised seals</div>
-        <div class="checklist-item">Use-by dates present on all items — yes or no</div>
-        <div class="checklist-item">Pass or reject decision for each category</div>
-        <div class="checklist-item">Any rejection reason and action taken (returned, discarded, credit requested)</div>
-        <div class="checklist-item">Your name</div>
+    <section class="check-section">
+      <div class="check-section-heading">
+        <h2>Have These Details Ready Before You Submit</h2>
+        <span class="check-section-tag">Check</span>
       </div>
-    </div>
+      <div class="check-items">
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Have These Details Ready Before You Submit</strong><span>Supplier name and delivery time</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Have These Details Ready Before You Submit</strong><span>Items or categories received (e.g. fresh protein, dairy, dry goods)</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Have These Details Ready Before You Submit</strong><span>Probe temperature of each chilled category</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Have These Details Ready Before You Submit</strong><span>Packaging condition — damaged, intact, or compromised seals</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Have These Details Ready Before You Submit</strong><span>Use-by dates present on all items — yes or no</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Have These Details Ready Before You Submit</strong><span>Pass or reject decision for each category</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Have These Details Ready Before You Submit</strong><span>Any rejection reason and action taken (returned, discarded, credit requested)</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Have These Details Ready Before You Submit</strong><span>Your name</span></span>
+        </label>
+      </div>
+    </section>
 
-    <div class="section-label">Rejection Criteria Reference</div>
-    <div class="temp-table">
+    <section class="check-section">
+      <div class="check-section-heading">
+        <h2>Rejection Criteria Reference</h2>
+        <span class="check-section-tag">Reference</span>
+      </div>
+      <div class="temp-table">
       <div class="temp-row header">
         <div>Category</div>
         <div>Reject if&hellip;</div>
@@ -146,12 +191,17 @@
     </div>
 
     
-    <button class="print-btn" onclick="window.print()">Print this page</button>
-    <a class="btn btn-arrow" href="#" target="_blank" rel="noopener" style="margin-top:32px;">Submit Receiving Log</a>
-    <p style="margin-top:18px;font-size:.8rem;color:var(--text-muted);line-height:1.68;">Submissions are logged automatically in the manager's Google Sheet. If you can't access the form, note details on paper and hand to your manager before you leave.</p>
+    
+    
+    <p>Submissions are logged automatically in the manager's Google Sheet. If you can't access the form, note details on paper and hand to your manager before you leave.</p>
+    </section>
+
+    <div class="check-actions">
+      <a  class="btn btn-arrow" href="#" target="_blank" rel="noopener">Submit Receiving Log</a>
+    </div>
 
     <div class="related">
-      <h2>Related</h2>
+      <h2>Related Checklists</h2>
       <div class="related-links">
         <a href="../sops/receiving-inspection.html">Receiving &amp; Inspection SOP</a>
         <a href="temp-log.html">Daily Temperature Log</a>

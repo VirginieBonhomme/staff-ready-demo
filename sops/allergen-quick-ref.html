@@ -75,22 +75,61 @@
 </nav>
 
 <main>
-  <div class="wrap">
+  <div class="wrap sop-doc">
 
-    <div class="page-header">
-      <h1>Allergen Quick Reference</h1>
-      <div class="meta">
-        <span><span class="meta-dot"></span> All Staff</span>
-        <span><span class="meta-dot"></span> Updated: May 2026</span>
-        <span><span class="meta-dot"></span> Category: Allergens</span>
+    <div class="sop-reference-bar">
+      <div>Staff Ready Ops. <span>Standard Operating Procedure</span></div>
+      <div>SOP Example</div>
+    </div>
+
+    <p class="sop-kicker">Allergens &middot; All Staff</p>
+    <h1 class="sop-title">Allergen Quick Reference</h1>
+
+    <div class="sop-meta-grid" aria-label="SOP details">
+      <div class="sop-meta-cell">
+        <span class="label">Department / Area</span>
+        <span class="value">All Departments &middot; Allergens</span>
+      </div>
+      <div class="sop-meta-cell">
+        <span class="label">Prepared By</span>
+        <span class="value">Manager, Kitchen Manager</span>
+      </div>
+      <div class="sop-meta-cell">
+        <span class="label">Date</span>
+        <span class="value">Reviewed May 2026</span>
+      </div>
+      <div class="sop-meta-cell">
+        <span class="label">Version</span>
+        <span class="value">1.0</span>
       </div>
     </div>
 
-    <p class="alert-block"><strong>A guest allergy is never a preference.</strong> If you are not 100% certain a dish is safe for a guest, you stop, you ask, and you get a confirmed answer before the food leaves the kitchen or the bar.</p>
+    <p class="sop-summary">A guest allergy is never a preference. If you are not 100% certain a dish is safe for a guest, you stop, you ask, and you get a confirmed answer before the food leaves the kitchen or the bar.</p>
 
-    <!-- ── The Big 9 ── -->
+    <section class="sop-section">
+      <div class="sop-section-heading">
+        <span class="sop-section-number">1</span>
+        <h2>Purpose</h2>
+      </div>
+      <p>This SOP defines the required standard for allergen quick reference so the team follows the same safe, consistent process every shift.</p>
+    </section>
 
-    <div class="section-label">The Big 9 Allergens</div>
+    <section class="sop-section">
+      <div class="sop-section-heading">
+        <span class="sop-section-number">2</span>
+        <h2>Scope</h2>
+      </div>
+      <p>Applies to All Staff and any team member assigned to this procedure, related checks, or manager follow-up.</p>
+    </section>
+
+    <section class="sop-section">
+      <div class="sop-section-heading">
+        <span class="sop-section-number">3</span>
+        <h2>Reference</h2>
+      </div>
+      <!-- ── The Big 9 ── -->
+
+    <div class="sop-callout"><h3>The Big 9 Allergens</h3></div>
     <div class="allergen-biglist">
       <span class="allergen-pill">Milk</span>
       <span class="allergen-pill">Eggs</span>
@@ -105,16 +144,16 @@
 
     <!-- ── Dish matrix ── -->
 
-    <div class="section-label">Dish Allergen Matrix</div>
-    <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:16px;">&#x25CF; = contains &nbsp;&nbsp; &mdash; = not present. Sulphites noted separately — not in the Big 9 but present in some dishes.</p>
+    <div class="sop-callout"><h3>Dish Allergen Matrix</h3></div>
+    <p>&#x25CF; = contains &nbsp;&nbsp; &mdash; = not present. Sulphites noted separately — not in the Big 9 but present in some dishes.</p>
 
-    <div class="allergen-grid" style="grid-template-columns: 1fr repeat(5,44px);">
+    <div class="allergen-grid">
       <div class="allergen-cell head">Dish</div>
-      <div class="allergen-cell head" style="text-align:center">Milk</div>
-      <div class="allergen-cell head" style="text-align:center">Fish</div>
-      <div class="allergen-cell head" style="text-align:center">Wheat</div>
-      <div class="allergen-cell head" style="text-align:center">Eggs</div>
-      <div class="allergen-cell head" style="text-align:center">Sulph.</div>
+      <div class="allergen-cell head">Milk</div>
+      <div class="allergen-cell head">Fish</div>
+      <div class="allergen-cell head">Wheat</div>
+      <div class="allergen-cell head">Eggs</div>
+      <div class="allergen-cell head">Sulph.</div>
 
       <div class="allergen-cell dish-name">Braised Beef Short Rib</div>
       <div class="allergen-cell allergen-hit">&#x25CF;</div>
@@ -159,12 +198,12 @@
       <div class="allergen-cell allergen-none">&mdash;</div>
     </div>
 
-    <p style="font-size:.78rem;color:var(--text-muted);margin-bottom:36px;">This matrix covers the current menu only. If a dish is modified or a new special is added, the allergen information must be confirmed with the head chef before service and updated here.</p>
+    <p>This matrix covers the current menu only. If a dish is modified or a new special is added, the allergen information must be confirmed with the head chef before service and updated here.</p>
 
     <!-- ── What to do ── -->
 
-    <div class="section-label">When a Guest Flags an Allergy</div>
-    <div style="border:1px solid var(--border);background:var(--bg-card);padding:4px 20px 8px;margin-bottom:36px;">
+    <div class="sop-callout"><h3>When a Guest Flags an Allergy</h3></div>
+    <div>
       <div class="action-row">
         <span class="action-num">1</span>
         <div class="action-text">
@@ -201,9 +240,68 @@
         </div>
       </div>
     </div>
+<button class="print-btn" onclick="window.print()">Print this page</button>
+    </section>
+
+    <section class="sop-section">
+      <div class="sop-section-heading">
+        <span class="sop-section-number">4</span>
+        <h2>Procedure</h2>
+      </div>
+      <div class="sop-step-list">
+        <article class="sop-callout">
+          <h3>Follow the Procedure</h3>
+          <p>Complete the procedure using the standards on this page. Stop and ask a manager before continuing if any step cannot be completed safely.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="sop-section">
+      <div class="sop-section-heading">
+        <span class="sop-section-number">5</span>
+        <h2>Standards</h2>
+      </div>
+      <div class="sop-record-grid">
+        <div class="sop-record-item">
+          <strong>Follow Sequence</strong>
+          Complete steps in order
+        </div>
+        <div class="sop-record-item">
+          <strong>Stop If Unsure</strong>
+          Ask the manager before guessing
+        </div>
+        <div class="sop-record-item">
+          <strong>Keep Clean</strong>
+          Reset tools and surfaces after use
+        </div>
+      </div>
+    </section>
+
+    <section class="sop-section">
+      <div class="sop-section-heading">
+        <span class="sop-section-number">6</span>
+        <h2>Corrective Action</h2>
+      </div>
+      <div class="sop-callout">
+        <h3>If the standard cannot be met</h3>
+        <p>Stop the task, tell the manager, isolate any affected food, equipment, or records, and follow the corrective action process before resuming.</p>
+      </div>
+      <div class="sop-callout">
+        <h3>If food safety may be affected</h3>
+        <p>Do not serve or store the affected item until a manager confirms the next action. Discard when safety cannot be verified.</p>
+      </div>
+    </section>
+
+    <section class="sop-section">
+      <div class="sop-section-heading">
+        <span class="sop-section-number">7</span>
+        <h2>Records</h2>
+      </div>
+      <p>Record any failed check, corrective action, manager decision, or required sign-off before the end of the shift.</p>
+    </section>
 
     <div class="related">
-      <h2>Related</h2>
+      <h2>Related SOPs</h2>
       <div class="related-links">
         <a href="allergen-handling.html">Allergen Handling SOP</a>
         <a href="../front-of-house/sops/allergen-communication.html">FOH Allergen Communication</a>
@@ -211,9 +309,6 @@
         <a href="../recipes/index.html">Recipe Library</a>
       </div>
     </div>
-
-
-    <button class="print-btn" onclick="window.print()">Print this page</button>
 
   </div>
 </main>

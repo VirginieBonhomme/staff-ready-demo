@@ -74,67 +74,120 @@
 </nav>
 
 <main>
-  <div class="wrap">
+  <div class="wrap check-doc">
 
-    <div class="page-header">
-      <h1>Kitchen Prep Brief</h1>
-      <div class="meta">
-        <span><span class="meta-dot"></span> Role: Head Chef · Kitchen Manager</span>
-        <span><span class="meta-dot"></span> Updated: May 2026</span>
+    <div class="sop-reference-bar">
+      <div>Staff Ready Ops. <span>Checklist</span></div>
+      <div>Pre-Service</div>
+    </div>
+
+    <p class="sop-kicker">Back of House &middot; Pre-Service</p>
+    <h1 class="check-title">Kitchen Prep Brief</h1>
+
+    <div class="check-status-grid" aria-label="Checklist details">
+      <div class="check-status-card">
+        <span class="label">Area</span>
+        <span class="value">Back of House</span>
+      </div>
+      <div class="check-status-card">
+        <span class="label">Owner</span>
+        <span class="value">BOH Lead</span>
+      </div>
+      <div class="check-status-card">
+        <span class="label">Due</span>
+        <span class="value">Before service</span>
       </div>
     </div>
+
     <div class="print-fields"><span class="print-field">Date</span><span class="print-field">Shift</span><span class="print-field">Signed by</span></div>
 
+    <p class="check-summary">Run this with the full kitchen team before every service. Every cook should hear the same information at the same time — allergen bookings, menu changes, and what's running low do not get passed cook-to-cook. They go through the brief.</p>
 
-    <p style="color:var(--text-muted);font-size:.95rem;line-height:1.78;margin-bottom:0;">Run this with the full kitchen team before every service. Every cook should hear the same information at the same time — allergen bookings, menu changes, and what's running low do not get passed cook-to-cook. They go through the brief.</p>
-
-    <div class="checklist-preview">
-      <h2>Brief Agenda</h2>
-
-      <div class="checklist-category">
-        <h3>Today's Service</h3>
-        <div class="checklist-item">Expected covers and any large parties or bookings that affect volume or timing</div>
-        <div class="checklist-item">Section assignments — who is on each station, who is on expo, who is on dish</div>
-        <div class="checklist-item">Any pacing notes from the manager — early push, held tables, VIP timing requirements</div>
+    <section class="check-section">
+      <div class="check-section-heading">
+        <h2>Prep Brief Checks</h2>
+        <span class="check-section-tag">Check</span>
       </div>
-
-      <div class="checklist-category">
-        <h3>Menu</h3>
-        <div class="checklist-item">Specials — components, allergens, portion weight, pickup time, and plating</div>
-        <div class="checklist-item">86 items and confirmed substitutions — stated clearly so every cook knows before service starts</div>
-        <div class="checklist-item">Any recipe changes or modifications approved since the last service</div>
-        <div class="checklist-item">Dishes with longer pickup times flagged — so expo knows to call them early</div>
+      <div class="check-items">
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Today's Service</strong><span>Expected covers and any large parties or bookings that affect volume or timing</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Today's Service</strong><span>Section assignments — who is on each station, who is on expo, who is on dish</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Today's Service</strong><span>Any pacing notes from the manager — early push, held tables, VIP timing requirements</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Menu</strong><span>Specials — components, allergens, portion weight, pickup time, and plating</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Menu</strong><span>86 items and confirmed substitutions — stated clearly so every cook knows before service starts</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Menu</strong><span>Any recipe changes or modifications approved since the last service</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Menu</strong><span>Dishes with longer pickup times flagged — so expo knows to call them early</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Allergen Handover</strong><span>All allergy bookings read aloud — table number, dietary requirement, and confirmed modification</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Allergen Handover</strong><span>Allergen tickets confirmed in the system and at the pass before first ticket drops</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Allergen Handover</strong><span>Clean-setup protocol confirmed — which station handles allergen tickets and what equipment is dedicated</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Allergen Handover</strong><span>Any new allergens or ingredient changes that affect the current allergen matrix</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Station Readiness</strong><span>All stations confirm mise en place is complete before the brief closes</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Station Readiness</strong><span>Equipment issues reported — nothing hidden, everything flagged to the manager before service</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Station Readiness</strong><span>Temperatures confirmed — fridge ≤ 41°F, hot hold ≥ 140°F before first ticket fires</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Station Readiness</strong><span>Handwashing stations checked — soap, paper towels, and access confirmed</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Previous Shift Notes</strong><span>Any complaints, service misses, or near-misses from the previous shift reviewed</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Previous Shift Notes</strong><span>Stock or prep shortfalls carried forward from opening that affect today's service</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Previous Shift Notes</strong><span>Emergency roles confirmed — who calls manager, who clears the kitchen, who stays on station in a crisis</span></span>
+        </label>
       </div>
+    </section>
 
-      <div class="checklist-category">
-        <h3>Allergen Handover</h3>
-        <div class="checklist-item">All allergy bookings read aloud — table number, dietary requirement, and confirmed modification</div>
-        <div class="checklist-item">Allergen tickets confirmed in the system and at the pass before first ticket drops</div>
-        <div class="checklist-item">Clean-setup protocol confirmed — which station handles allergen tickets and what equipment is dedicated</div>
-        <div class="checklist-item">Any new allergens or ingredient changes that affect the current allergen matrix</div>
-      </div>
-
-      <div class="checklist-category">
-        <h3>Station Readiness</h3>
-        <div class="checklist-item">All stations confirm mise en place is complete before the brief closes</div>
-        <div class="checklist-item">Equipment issues reported — nothing hidden, everything flagged to the manager before service</div>
-        <div class="checklist-item">Temperatures confirmed — fridge ≤ 41°F, hot hold ≥ 140°F before first ticket fires</div>
-        <div class="checklist-item">Handwashing stations checked — soap, paper towels, and access confirmed</div>
-      </div>
-
-      <div class="checklist-category">
-        <h3>Previous Shift Notes</h3>
-        <div class="checklist-item">Any complaints, service misses, or near-misses from the previous shift reviewed</div>
-        <div class="checklist-item">Stock or prep shortfalls carried forward from opening that affect today's service</div>
-        <div class="checklist-item">Emergency roles confirmed — who calls manager, who clears the kitchen, who stays on station in a crisis</div>
-      </div>
+    <div class="check-actions">
+      <a  class="btn btn-arrow" href="#" target="_blank" rel="noopener">Submit Prep Brief Log</a>
     </div>
 
-    
-    <button class="print-btn" onclick="window.print()">Print this page</button>
-    <a class="btn btn-arrow" href="#" target="_blank" rel="noopener">Submit Prep Brief Log</a>
-
-    <p style="margin-top:18px;font-size:.8rem;color:var(--text-muted);line-height:1.68;">The log captures what was communicated, any issues raised, and who was present. If you can't access the form, record the brief in the kitchen log book before service starts.</p>
 
   </div>
 </main>

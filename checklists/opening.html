@@ -74,23 +74,41 @@
 </nav>
 
 <main>
-  <div class="wrap">
+  <div class="wrap check-doc">
 
-    <div class="page-header">
-      <h1>Opening Checklists</h1>
-      <div class="meta">
-        <span><span class="meta-dot"></span> BOH &amp; FOH</span>
-        <span><span class="meta-dot"></span> Role Responsibilities</span>
-        <span><span class="meta-dot"></span> Updated: May 2026</span>
+    <div class="sop-reference-bar">
+      <div>Staff Ready Ops. <span>Checklist</span></div>
+      <div>Opening</div>
+    </div>
+
+    <p class="sop-kicker">Operations &middot; Opening</p>
+    <h1 class="check-title">Opening Checklists</h1>
+
+    <div class="check-status-grid" aria-label="Checklist details">
+      <div class="check-status-card">
+        <span class="label">Area</span>
+        <span class="value">Operations</span>
+      </div>
+      <div class="check-status-card">
+        <span class="label">Owner</span>
+        <span class="value">Shift Lead</span>
+      </div>
+      <div class="check-status-card">
+        <span class="label">Due</span>
+        <span class="value">Before service starts</span>
       </div>
     </div>
+
     <div class="print-fields"><span class="print-field">Date</span><span class="print-field">Shift</span><span class="print-field">Signed by</span></div>
 
+    <p class="check-summary">Choose the right opening checklist before service starts. BOH owns food, prep, equipment, and safety. FOH owns the room, guest systems, reservations, and service stations. Role notes below clarify who checks what.</p>
 
-    <p style="color:var(--text-muted);font-size:.95rem;line-height:1.78;margin-bottom:36px;">Choose the right opening checklist before service starts. BOH owns food, prep, equipment, and safety. FOH owns the room, guest systems, reservations, and service stations. Role notes below clarify who checks what.</p>
-
-    <div class="section-label">Your Role Checklist</div>
-    <div class="quick-links">
+    <section class="check-section">
+      <div class="check-section-heading">
+        <h2>Your Role Checklist</h2>
+        <span class="check-section-tag">Reference</span>
+      </div>
+      <div class="quick-links">
       <a class="quick-link" href="opener.html"><span class="ql-label">BOH</span><span class="ql-name">Opener</span><span class="ql-arrow">&rarr;</span></a>
       <a class="quick-link" href="line-cook.html"><span class="ql-label">BOH</span><span class="ql-name">Line Cook</span><span class="ql-arrow">&rarr;</span></a>
       <a class="quick-link" href="prep-cook.html"><span class="ql-label">BOH</span><span class="ql-name">Prep Cook</span><span class="ql-arrow">&rarr;</span></a>
@@ -100,75 +118,136 @@
       <a class="quick-link" href="bartender.html"><span class="ql-label">FOH</span><span class="ql-name">Bartender</span><span class="ql-arrow">&rarr;</span></a>
       <a class="quick-link" href="closer.html"><span class="ql-label">BOH</span><span class="ql-name">Closer</span><span class="ql-arrow">&rarr;</span></a>
     </div>
+    </section>
 
-    <div class="section-label">Department Opening</div>
-    <div class="quick-links">
+    <section class="check-section">
+      <div class="check-section-heading">
+        <h2>Department Opening</h2>
+        <span class="check-section-tag">Reference</span>
+      </div>
+      <div class="quick-links">
       <a class="quick-link" href="../back-of-house/checklists/opening.html"><span class="ql-label">BOH</span><span class="ql-name">Kitchen Opening</span><span class="ql-arrow">&rarr;</span></a>
       <a class="quick-link" href="../front-of-house/checklists/opening.html"><span class="ql-label">FOH</span><span class="ql-name">Room Opening</span><span class="ql-arrow">&rarr;</span></a>
       <a class="quick-link" href="../front-of-house/checklists/pre-service.html"><span class="ql-label">Brief</span><span class="ql-name">Pre-Service Brief</span><span class="ql-arrow">&rarr;</span></a>
       <a class="quick-link" href="closing.html"><span class="ql-label">Switch</span><span class="ql-name">Closing Checklists</span><span class="ql-arrow">&rarr;</span></a>
     </div>
+    </section>
 
-    <div class="section-label">BOH Role Opening</div>
-    <div class="checklist-preview">
-      <h2>Kitchen role responsibilities</h2>
-      <div class="checklist-category">
-        <h3>Line Cook</h3>
-        <div class="checklist-item">Confirm station is sanitized, stocked, labelled, and ready for first ticket</div>
-        <div class="checklist-item">Check fryer, grill, hot-hold, utensils, towels, and backup pans before service</div>
-        <div class="checklist-item">Read 86 list, specials, allergen notes, and expected rush timing</div>
+    <section class="check-section">
+      <div class="check-section-heading">
+        <h2>BOH Role Opening</h2>
+        <span class="check-section-tag">Check</span>
       </div>
-      <div class="checklist-category">
-        <h3>Prep Cook</h3>
-        <div class="checklist-item">Pull prep list, inspect yesterday's labelled items, and rotate stock FIFO</div>
-        <div class="checklist-item">Set cold prep station with boards, sanitizer, labels, deli cups, and scales</div>
-        <div class="checklist-item">Flag low prep, missing product, or quality issues before service starts</div>
+      <div class="check-items">
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Line Cook</strong><span>Confirm station is sanitized, stocked, labelled, and ready for first ticket</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Line Cook</strong><span>Check fryer, grill, hot-hold, utensils, towels, and backup pans before service</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Line Cook</strong><span>Read 86 list, specials, allergen notes, and expected rush timing</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Prep Cook</strong><span>Pull prep list, inspect yesterday's labelled items, and rotate stock FIFO</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Prep Cook</strong><span>Set cold prep station with boards, sanitizer, labels, deli cups, and scales</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Prep Cook</strong><span>Flag low prep, missing product, or quality issues before service starts</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Dishwasher</strong><span>Start dish machine, verify chemical level, temperature, filters, and drain screens</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Dishwasher</strong><span>Set three-sink area, drying racks, glass racks, cutlery bins, and clean storage</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Dishwasher</strong><span>Empty bus tubs from previous shift and stage clean smallwares for prep</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Opener</strong><span>Own BOH opening checklist submission and escalate blockers before service</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Opener</strong><span>Verify fridge, freezer, hot-hold, probe, hand sink, and first service setup</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Opener</strong><span>Confirm station owners know their priorities and first prep deadlines</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Closer Starting a Shift</strong><span>Review previous close notes for maintenance, low stock, cleaning misses, or handover flags</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Closer Starting a Shift</strong><span>Confirm close-down supplies are stocked before service gets busy</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Closer Starting a Shift</strong><span>Identify any end-of-night tasks that need early prep or manager approval</span></span>
+        </label>
       </div>
-      <div class="checklist-category">
-        <h3>Dishwasher</h3>
-        <div class="checklist-item">Start dish machine, verify chemical level, temperature, filters, and drain screens</div>
-        <div class="checklist-item">Set three-sink area, drying racks, glass racks, cutlery bins, and clean storage</div>
-        <div class="checklist-item">Empty bus tubs from previous shift and stage clean smallwares for prep</div>
-      </div>
-      <div class="checklist-category">
-        <h3>Opener</h3>
-        <div class="checklist-item">Own BOH opening checklist submission and escalate blockers before service</div>
-        <div class="checklist-item">Verify fridge, freezer, hot-hold, probe, hand sink, and first service setup</div>
-        <div class="checklist-item">Confirm station owners know their priorities and first prep deadlines</div>
-      </div>
-      <div class="checklist-category">
-        <h3>Closer Starting a Shift</h3>
-        <div class="checklist-item">Review previous close notes for maintenance, low stock, cleaning misses, or handover flags</div>
-        <div class="checklist-item">Confirm close-down supplies are stocked before service gets busy</div>
-        <div class="checklist-item">Identify any end-of-night tasks that need early prep or manager approval</div>
-      </div>
-    </div>
+    </section>
 
-    <div class="section-label">FOH Role Opening</div>
-    <div class="checklist-preview">
-      <h2>Guest-facing role responsibilities</h2>
-      <div class="checklist-category">
-        <h3>Server</h3>
-        <div class="checklist-item">Set section, water station, cutlery, napkins, trays, pens, and sidework par</div>
-        <div class="checklist-item">Read specials, 86 items, allergens, VIP notes, and service pacing plan</div>
-        <div class="checklist-item">Test POS login, printer routing, table numbers, and payment terminal access</div>
+    <section class="check-section">
+      <div class="check-section-heading">
+        <h2>FOH Role Opening</h2>
+        <span class="check-section-tag">Check</span>
       </div>
-      <div class="checklist-category">
-        <h3>Host</h3>
-        <div class="checklist-item">Confirm reservations, waitlist tools, seating plan, accessibility needs, and special occasions</div>
-        <div class="checklist-item">Walk entrance, host stand, menus, restrooms, waiting area, and first impression details</div>
-        <div class="checklist-item">Brief servers on allergies, VIPs, large parties, and table turn pressure points</div>
+      <div class="check-items">
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Server</strong><span>Set section, water station, cutlery, napkins, trays, pens, and sidework par</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Server</strong><span>Read specials, 86 items, allergens, VIP notes, and service pacing plan</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Server</strong><span>Test POS login, printer routing, table numbers, and payment terminal access</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Host</strong><span>Confirm reservations, waitlist tools, seating plan, accessibility needs, and special occasions</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Host</strong><span>Walk entrance, host stand, menus, restrooms, waiting area, and first impression details</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Host</strong><span>Brief servers on allergies, VIPs, large parties, and table turn pressure points</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Bartender</strong><span>Stock ice, garnish, glassware, fruit, syrups, batch items, wine keys, and polishing cloths</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Bartender</strong><span>Check bar POS, card terminal, receipt paper, tabs, and cash drawer setup</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Bartender</strong><span>Confirm drink 86s, specials, low stock, and non-alcoholic recommendations</span></span>
+        </label>
       </div>
-      <div class="checklist-category">
-        <h3>Bartender</h3>
-        <div class="checklist-item">Stock ice, garnish, glassware, fruit, syrups, batch items, wine keys, and polishing cloths</div>
-        <div class="checklist-item">Check bar POS, card terminal, receipt paper, tabs, and cash drawer setup</div>
-        <div class="checklist-item">Confirm drink 86s, specials, low stock, and non-alcoholic recommendations</div>
-      </div>
-    </div>
+    </section>
 
 
-    <button class="print-btn" onclick="window.print()">Print this page</button>
 
   </div>
 </main>

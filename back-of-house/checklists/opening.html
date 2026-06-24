@@ -74,61 +74,112 @@
 </nav>
 
 <main>
-  <div class="wrap">
+  <div class="wrap check-doc">
 
-    <div class="page-header">
-      <h1>BOH Opening Checklist</h1>
-      <div class="meta">
-        <span><span class="meta-dot"></span> Area: Back of House</span>
-        <span><span class="meta-dot"></span> Updated: May 2026</span>
+    <div class="sop-reference-bar">
+      <div>Staff Ready Ops. <span>Checklist</span></div>
+      <div>Opening</div>
+    </div>
+
+    <p class="sop-kicker">Back of House &middot; Opening</p>
+    <h1 class="check-title">BOH Opening Checklist</h1>
+
+    <div class="check-status-grid" aria-label="Checklist details">
+      <div class="check-status-card">
+        <span class="label">Area</span>
+        <span class="value">Back of House</span>
+      </div>
+      <div class="check-status-card">
+        <span class="label">Owner</span>
+        <span class="value">BOH Lead</span>
+      </div>
+      <div class="check-status-card">
+        <span class="label">Due</span>
+        <span class="value">Before service starts</span>
       </div>
     </div>
+
     <div class="print-fields"><span class="print-field">Date</span><span class="print-field">Shift</span><span class="print-field">Signed by</span></div>
 
+    <p class="check-summary">Review what's expected this shift, then tap the button below to submit today's checklist. The form is timestamped and goes straight to the manager's log.</p>
 
-    <p style="color:var(--text-muted);font-size:.95rem;line-height:1.78;margin-bottom:0;">Review what's expected this shift, then tap the button below to submit today's checklist. The form is timestamped and goes straight to the manager's log.</p>
-
-    <div class="checklist-preview">
-      <h2>What to expect this shift</h2>
-
-      <div class="checklist-category">
-        <h3>Temperatures</h3>
-        <div class="checklist-item">Log fridge temperature (must be &le; 41&deg;F)</div>
-        <div class="checklist-item">Log freezer temperature (must be &le; 0&deg;F)</div>
-        <div class="checklist-item">Probe-check a mid-shelf fridge item</div>
+    <section class="check-section">
+      <div class="check-section-heading">
+        <h2>Opening Checks</h2>
+        <span class="check-section-tag">Check</span>
       </div>
-
-      <div class="checklist-category">
-        <h3>Morning Setup</h3>
-        <div class="checklist-item">Check and date-label all prepped items from yesterday</div>
-        <div class="checklist-item">Sanitize all cutting boards and prep surfaces</div>
-        <div class="checklist-item">Set up handwashing station — soap, paper towels stocked</div>
-        <div class="checklist-item">Start fryer preheat</div>
-        <div class="checklist-item">Pull protein for first service</div>
-        <div class="checklist-item">Set up garnish station</div>
-        <div class="checklist-item">Confirm pass is clean and clear</div>
+      <div class="check-items">
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Temperatures</strong><span>Log fridge temperature (must be &le; 41&deg;F)</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Temperatures</strong><span>Log freezer temperature (must be &le; 0&deg;F)</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Temperatures</strong><span>Probe-check a mid-shelf fridge item</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Morning Setup</strong><span>Check and date-label all prepped items from yesterday</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Morning Setup</strong><span>Sanitize all cutting boards and prep surfaces</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Morning Setup</strong><span>Set up handwashing station — soap, paper towels stocked</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Morning Setup</strong><span>Start fryer preheat</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Morning Setup</strong><span>Pull protein for first service</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Morning Setup</strong><span>Set up garnish station</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Morning Setup</strong><span>Confirm pass is clean and clear</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Stock &amp; Storage</strong><span>Check dry storage — nothing on the floor</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Stock &amp; Storage</strong><span>Rotate any new stock (FIFO)</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Stock &amp; Storage</strong><span>Check bin liners are in place</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Equipment Check</strong><span>Confirm all knives are on the magnetic strip</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Equipment Check</strong><span>Check probe thermometer is calibrated and available</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>Equipment Check</strong><span>Confirm fryer has reached service temperature before service</span></span>
+        </label>
       </div>
+    </section>
 
-      <div class="checklist-category">
-        <h3>Stock &amp; Storage</h3>
-        <div class="checklist-item">Check dry storage — nothing on the floor</div>
-        <div class="checklist-item">Rotate any new stock (FIFO)</div>
-        <div class="checklist-item">Check bin liners are in place</div>
-      </div>
-
-      <div class="checklist-category">
-        <h3>Equipment Check</h3>
-        <div class="checklist-item">Confirm all knives are on the magnetic strip</div>
-        <div class="checklist-item">Check probe thermometer is calibrated and available</div>
-        <div class="checklist-item">Confirm fryer has reached service temperature before service</div>
-      </div>
+    <div class="check-actions">
+      <a  class="btn btn-arrow" href="https://docs.google.com/forms/d/e/1FAIpQLSeA_tj9ogC8y61OTEghrYoq4So_Q968zcC81XjxmvTPMMsByA/viewform?usp=publish-editor" target="_blank" rel="noopener">Start Today's Checklist</a>
     </div>
 
-    
-    <button class="print-btn" onclick="window.print()">Print this page</button>
-    <a class="btn btn-arrow" href="https://docs.google.com/forms/d/e/1FAIpQLSeA_tj9ogC8y61OTEghrYoq4So_Q968zcC81XjxmvTPMMsByA/viewform?usp=publish-editor" target="_blank" rel="noopener">Start Today's Checklist</a>
-
-    <p style="margin-top:18px;font-size:.8rem;color:var(--text-muted);line-height:1.68;">Submissions are logged automatically in the manager's Google Sheet. If you can't access the form, tell your manager before service starts.</p>
 
   </div>
 </main>

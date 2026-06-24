@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temperature Logging · Staff Ready Ops.</title>
+  <title>Walk-in &amp; Freezer Temperature Logging · Staff Ready Ops.</title>
   <link rel="stylesheet" href="../assets/style.css">
   <script src="../assets/auth.js"></script>
   <script>checkZone(2);</script>
@@ -74,62 +74,162 @@
 </nav>
 
 <main>
-  <div class="wrap">
+  <div class="wrap sop-doc">
 
-    <div class="page-header">
-      <h1>Temperature Logging</h1>
-      <div class="meta">
-        <span><span class="meta-dot"></span> Role: Opener / Line Cook</span>
-        <span><span class="meta-dot"></span> Updated: May 2026</span>
-        <span><span class="meta-dot"></span> Category: Food Safety</span>
+    <div class="sop-reference-bar">
+      <div>Staff Ready Ops. <span>Standard Operating Procedure</span></div>
+      <div>SOP Example</div>
+    </div>
+
+    <p class="sop-kicker">Food Safety &middot; Back of House</p>
+    <h1 class="sop-title">Walk-in &amp; Freezer Temperature Logging</h1>
+
+    <div class="sop-meta-grid" aria-label="SOP details">
+      <div class="sop-meta-cell">
+        <span class="label">Department / Area</span>
+        <span class="value">Back of House &middot; Food Safety</span>
+      </div>
+      <div class="sop-meta-cell">
+        <span class="label">Prepared By</span>
+        <span class="value">Chef, Kitchen Manager</span>
+      </div>
+      <div class="sop-meta-cell">
+        <span class="label">Date</span>
+        <span class="value">Reviewed May 2026</span>
+      </div>
+      <div class="sop-meta-cell">
+        <span class="label">Version</span>
+        <span class="value">1.0</span>
       </div>
     </div>
 
-    <p class="alert-block"><strong>Safe temperature zones:</strong> Cold food: Hold at 41&deg;F or below &middot; Frozen food: Keep at 0&deg;F or below &middot; Hot food: Hold at 140&deg;F or above &middot; Danger zone: 41&deg;F&ndash;140&deg;F. Food must never sit in the danger zone for more than 2 hours.</p>
+    <p class="sop-summary">Keep every cold unit in the safe range so food does not sit in the temperature danger zone, and so the restaurant has a written record for managers, audits, and health inspections.</p>
 
-    <div class="step">
-      <p class="step-number">Step 1</p>
-      <h3>Check fridge temperature first thing on arrival</h3>
-      <p>Before opening any fridge or handling any food, check the fridge temperature display. Reading must show 41&deg;F or below. Log the temperature, your name, and the time on the Opening Checklist immediately. Do not skip this step even if the fridge appears to be running normally.</p>
-      <img class="step-img" src="../assets/temperature-logging-sop/Temperature_Logging_SOP_1.png" alt="Fridge temperature display showing correct reading at 38 degrees Fahrenheit">
-      <p class="step-note">Note — If the fridge reads above 46&deg;F, do not use the food inside. Alert your manager immediately and do not open the door again until they have assessed.</p>
-    </div>
+    <section class="sop-section">
+      <div class="sop-section-heading">
+        <span class="sop-section-number">1</span>
+        <h2>Purpose</h2>
+      </div>
+      <p>This SOP explains how to check, verify, and record walk-in cooler, reach-in fridge, and freezer temperatures at the start and end of each operating day.</p>
+    </section>
 
-    <hr class="divider">
+    <section class="sop-section">
+      <div class="sop-section-heading">
+        <span class="sop-section-number">2</span>
+        <h2>Scope</h2>
+      </div>
+      <p>Applies to every walk-in cooler, reach-in fridge, lowboy, prep fridge, and freezer used by the kitchen. Opening shift logs the first readings. Closing shift logs the final readings before lock-up.</p>
+    </section>
 
-    <div class="step">
-      <p class="step-number">Step 2</p>
-      <h3>Probe-check a mid-shelf item to verify</h3>
-      <p>The display reading confirms the air temperature — also check an actual food item on the middle shelf using a probe thermometer. Insert the probe into the centre of a dense, covered ready-to-eat item such as a container of sauce, cooked food, or dairy. The centre reading must be at or below 41&deg;F. Wipe and sanitize the probe between readings.</p>
-      <img class="step-img" src="../assets/temperature-logging-sop/Temperature_Logging_SOP_2.png" alt="Probe thermometer checking centre temperature of food item in fridge">
-    </div>
+    <section class="sop-section">
+      <div class="sop-section-heading">
+        <span class="sop-section-number">3</span>
+        <h2>Safe Ranges</h2>
+      </div>
+      <div class="sop-record-grid">
+        <div class="sop-record-item">
+          <strong>Cold Holding</strong>
+          41&deg;F or below
+        </div>
+        <div class="sop-record-item">
+          <strong>Frozen Storage</strong>
+          0&deg;F or below
+        </div>
+        <div class="sop-record-item">
+          <strong>Danger Zone</strong>
+          41&deg;F to 140&deg;F
+        </div>
+      </div>
+      <div class="sop-callout">
+        <h3>Critical Limit</h3>
+        <p>Food must never sit in the danger zone for more than 2 hours. Any failed reading must be logged with the corrective action taken.</p>
+      </div>
+    </section>
 
-    <hr class="divider">
+    <section class="sop-section">
+      <div class="sop-section-heading">
+        <span class="sop-section-number">4</span>
+        <h2>Tools Needed</h2>
+      </div>
+      <ul class="sop-list">
+        <li>Calibrated probe thermometer</li>
+        <li>Sanitizer wipes or approved probe sanitizer</li>
+        <li>Kitchen tablet, phone, or printed daily temperature log</li>
+        <li>Manager contact if any reading is outside the safe range</li>
+      </ul>
+    </section>
 
-    <div class="step">
-      <p class="step-number">Step 3</p>
-      <h3>Log freezer temperature</h3>
-      <p>Check the freezer temperature display and record it alongside the fridge reading. Freezer must read 0&deg;F or below. If the freezer is warmer than 5&deg;F, there may be a seal issue or compressor problem — do not wait until closing to report this. Log it and notify the manager during opening.</p>
-      <img class="step-img" src="../assets/temperature-logging-sop/Temperature_Logging_SOP_3.png" alt="Freezer display showing correct temperature reading">
-    </div>
+    <section class="sop-section">
+      <div class="sop-section-heading">
+        <span class="sop-section-number">5</span>
+        <h2>Procedure</h2>
+      </div>
 
-    <hr class="divider">
+      <div class="sop-step-list">
+        <article class="sop-procedure-step">
+          <div>
+            <p class="sop-step-label">Step 1</p>
+            <h3>Check the fridge display first thing on arrival</h3>
+            <p>Before opening the fridge or handling food, check the temperature display. The reading must show 41&deg;F or below. Record the temperature, time, unit name, and your initials immediately.</p>
+          </div>
+          <img src="../assets/temperature-logging-sop/Temperature_Logging_SOP_1.png" alt="Fridge temperature display showing a safe cold-holding reading">
+        </article>
 
-    <div class="step">
-      <p class="step-number">Step 4</p>
-      <h3>Submit the log via the opening checklist form</h3>
-      <p>All temperature readings go into the Opening Checklist form — not written on a slip of paper. The form timestamps and stores every submission in the manager's log sheet automatically. If you miss the form, the reading doesn't officially exist. Submit before service starts, not at the end of your shift.</p>
-      <img class="step-img" src="../assets/temperature-logging-sop/Temperature_Logging_SOP_4.png" alt="Staff member submitting temperature readings on mobile via the checklist form">
-      <p class="step-note">Note — The form is linked from the <a href="../checklists/opening.html" style="color:var(--brand-accent);">Opening Checklist page</a> — bookmark it on the kitchen tablet.</p>
-    </div>
+        <article class="sop-procedure-step">
+          <div>
+            <p class="sop-step-label">Step 2</p>
+            <h3>Probe-check a mid-shelf item to verify</h3>
+            <p>Use a sanitized probe thermometer to check the center of a dense, covered ready-to-eat item on the middle shelf. The center reading must be 41&deg;F or below. Sanitize the probe before and after use.</p>
+          </div>
+          <img src="../assets/temperature-logging-sop/Temperature_Logging_SOP_2.png" alt="Probe thermometer checking the center temperature of a refrigerated food item">
+        </article>
 
-    <div class="step">
-      <p class="step-number">Step 5</p>
-      <h3>Follow the cooling and corrective action procedures when readings fail</h3>
-      <p>If any temperature reading is outside the safe range, you must act immediately — do not wait until the end of your shift. For equipment failures or food out of temperature, see the <a href="corrective-action.html" style="color:var(--brand-accent);">Corrective Action SOP</a> for the full decision process. For food that needs to be cooled after cooking, see the <a href="cooling-reheating.html" style="color:var(--brand-accent);">Cooling &amp; Reheating SOP</a> — cooling records have their own section in the daily temperature log.</p>
-      <p>Log all readings — including failed ones and the corrective action taken — on the <a href="../checklists/temp-log.html" style="color:var(--brand-accent);">Daily Temperature Log</a>. Temperature logs must be retained for a minimum of 3 months and are routinely checked by Environmental Health Officers during inspections.</p>
-      <p class="step-note">Note — A completed temperature log is due diligence evidence. If your fridge fails during the night and you have no record of the previous day's correct temperatures, you cannot demonstrate the food was safe before the failure. Log every day, without exception.</p>
-    </div>
+        <article class="sop-procedure-step">
+          <div>
+            <p class="sop-step-label">Step 3</p>
+            <h3>Check and log freezer temperature</h3>
+            <p>Check each freezer display and record the reading alongside the fridge readings. Freezers must read 0&deg;F or below. If a freezer is warmer than 5&deg;F, notify the manager during opening.</p>
+          </div>
+          <img src="../assets/temperature-logging-sop/Temperature_Logging_SOP_3.png" alt="Freezer temperature display showing a safe frozen-storage reading">
+        </article>
+
+        <article class="sop-procedure-step">
+          <div>
+            <p class="sop-step-label">Step 4</p>
+            <h3>Submit the daily temperature log</h3>
+            <p>Enter all readings into the <a href="../checklists/temp-log.html" style="color:var(--brand-accent);">Daily Temperature Log</a> or the opening checklist form before service starts. Paper notes are not the official record unless a manager has approved them during a system outage.</p>
+          </div>
+          <img src="../assets/temperature-logging-sop/Temperature_Logging_SOP_4.png" alt="Staff member submitting temperature readings on a mobile device">
+        </article>
+      </div>
+    </section>
+
+    <section class="sop-section">
+      <div class="sop-section-heading">
+        <span class="sop-section-number">6</span>
+        <h2>Corrective Action</h2>
+      </div>
+      <div class="sop-callout">
+        <h3>If a fridge reads above 41&deg;F</h3>
+        <p>Keep the door closed, notify the manager, and probe-check food as directed. Do not use food from the unit until a manager confirms it is safe.</p>
+      </div>
+      <div class="sop-callout">
+        <h3>If a fridge reads above 46&deg;F</h3>
+        <p>Stop using the unit immediately. Do not open the door again unless instructed by the manager. Log the failed reading and follow the <a href="corrective-action.html" style="color:var(--brand-accent);">Corrective Action SOP</a>.</p>
+      </div>
+      <div class="sop-callout">
+        <h3>If food is out of temperature</h3>
+        <p>Record the item, temperature, time found, and action taken. Discard food when required. Never relabel, cool, or serve food that cannot be proven safe.</p>
+      </div>
+    </section>
+
+    <section class="sop-section">
+      <div class="sop-section-heading">
+        <span class="sop-section-number">7</span>
+        <h2>Records</h2>
+      </div>
+      <p>Temperature logs must be completed every day the kitchen is open and retained for a minimum of 3 months. Managers review missed logs, failed readings, and corrective actions during shift close and inspection prep.</p>
+    </section>
 
     <div class="related">
       <h2>Related SOPs</h2>
@@ -137,9 +237,7 @@
         <a href="cooling-reheating.html">Cooling &amp; Reheating</a>
         <a href="corrective-action.html">Corrective Action</a>
         <a href="thermometer-calibration.html">Thermometer Calibration</a>
-        <a href="fryer-startup.html">Fryer Startup</a>
-        <a href="allergen-handling.html">Allergen Handling</a>
-        <a href="dry-storage.html">Dry Storage</a>
+        <a href="../checklists/temp-log.html">Daily Temperature Log</a>
       </div>
     </div>
 
