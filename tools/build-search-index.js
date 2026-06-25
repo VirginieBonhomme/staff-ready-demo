@@ -10,8 +10,7 @@ const OUT  = path.join(ROOT, 'assets', 'search-index.js');
 
 const SKIP_FILES = new Set([
   'search/index.html',
-  'gate-wifi.html',
-  'gate-boh.html',
+  'gate-access.html',
   'index.html',
 ]);
 

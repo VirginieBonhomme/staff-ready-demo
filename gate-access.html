@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BOH Access · Staff Ready Ops.</title>
+  <title>Team Access · Staff Ready Ops.</title>
   <link rel="stylesheet" href="assets/style.css">
   <script src="assets/auth.js"></script>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="1402abf4-6ac0-4647-9e6c-a5e6dc020640"></script>
@@ -104,20 +104,21 @@
       <circle cx="24" cy="33" r="3" fill="#141412"/>
     </svg>
 
-    <div class="gate-eyebrow">Restricted Access</div>
-    <h1>Back of House</h1>
-    <p>Enter the BOH team password to access recipes and kitchen resources.</p>
+    <div class="gate-eyebrow">Team Access</div>
+    <h1>Enter Password</h1>
+    <p>Use the team password from your manager to open the operations playbook.</p>
 
-    <form class="gate-form" id="boh-form" onsubmit="handleSubmit(event)">
+    <form class="gate-form" id="access-form" onsubmit="handleSubmit(event)">
       <input
         class="gate-input"
-        id="boh-password"
+        id="access-password"
         type="password"
-        placeholder="BOH password"
+        placeholder="Team password"
         autocomplete="current-password"
+        autofocus
         required
       >
-      <span class="gate-error" id="boh-error">Incorrect password — check with your manager.</span>
+      <span class="gate-error" id="access-error">Incorrect password. Check with your manager.</span>
       <div class="gate-actions">
         <button class="btn btn-accent btn-arrow" type="submit">Enter</button>
         <a class="gate-back" href="index.html">&larr; Back to Home</a>
@@ -140,13 +141,13 @@
 
   function handleSubmit(e) {
     e.preventDefault();
-    const pw  = document.getElementById('boh-password').value;
-    const err = document.getElementById('boh-error');
+    const pw  = document.getElementById('access-password').value;
+    const err = document.getElementById('access-error');
     err.classList.remove('visible');
-    submitBOHPassword(pw, () => {
+    submitSharedPassword(pw, () => {
       err.classList.add('visible');
-      document.getElementById('boh-password').value = '';
-      document.getElementById('boh-password').focus();
+      document.getElementById('access-password').value = '';
+      document.getElementById('access-password').focus();
     });
   }
 </script>
