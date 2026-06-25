@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opening Checklist Form · Harbor &amp; Hearth</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="client-build-banner">
+  <div class="wrap">
+    <strong>This is what your restaurant looks like</strong>
+    <span>In a live client build, this button opens the restaurant's connected Google Form and saves submissions to the manager's Sheet.</span>
+  </div>
+</div>
+
+<nav id="main-nav">
+  <div class="wrap">
+    <a class="nav-logo" href="index.html">Harbor &amp; Hearth</a>
+    <button class="nav-burger" id="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sops.html">SOPs</a></li>
+      <li><a href="doh-compliance.html">DOH Library</a></li>
+      <li><a href="opening-checklist.html">Checklist</a></li>
+      <li><a href="line-cook.html">Role</a></li>
+      <li><a href="search.html">Search</a></li>
+      <li><a href="crisis.html" class="nav-crisis">Crisis</a></li>
+      <li><a href="owner.html" class="nav-search-link">Owner View</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap check-doc">
+    <div class="sop-reference-bar">
+      <div>Harbor &amp; Hearth <span>Google Form Connection</span></div>
+      <div>Opening</div>
+    </div>
+
+    <p class="sop-kicker">Manager Log &middot; Google Forms</p>
+    <h1 class="check-title">Opening Checklist Submission</h1>
+    <p class="check-summary">This screen represents the connected Google Form. In a live build, the staff member submits the checklist here and the response is timestamped in the manager's Google Sheet.</p>
+
+    <div class="check-status-grid" aria-label="Form details">
+      <div class="check-status-card">
+        <span class="label">Form</span>
+        <span class="value">Opening Checklist</span>
+      </div>
+      <div class="check-status-card">
+        <span class="label">Saved To</span>
+        <span class="value">Manager Google Sheet</span>
+      </div>
+      <div class="check-status-card">
+        <span class="label">Use</span>
+        <span class="value">Daily Shift Record</span>
+      </div>
+    </div>
+
+    <section class="check-section">
+      <div class="check-section-heading">
+        <h2>Submission Fields</h2>
+        <span class="check-section-tag">Form</span>
+      </div>
+      <div class="check-items">
+        <label class="check-item"><input type="checkbox"><span><strong>Date and shift</strong><span>Auto-timestamped by Google Forms.</span></span></label>
+        <label class="check-item"><input type="checkbox"><span><strong>Completed by</strong><span>Staff member or opening lead name.</span></span></label>
+        <label class="check-item"><input type="checkbox"><span><strong>Blockers</strong><span>Any missing product, failed equipment, failed temperature, or manager follow-up.</span></span></label>
+        <label class="check-item"><input type="checkbox"><span><strong>Manager notes</strong><span>Optional handoff notes for the next shift.</span></span></label>
+      </div>
+    </section>
+
+    <div class="check-actions">
+      <a class="btn btn-accent btn-arrow" href="opening-checklist.html">Back To Checklist</a>
+      <a class="btn btn-arrow" href="owner.html">Owner View</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>Harbor &amp; Hearth &middot; <a href="index.html">Home</a> &middot; <a href="opening-checklist.html">Checklist</a></p>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('main-nav');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+</script>
+
+<a class="crisis-float" href="crisis.html" aria-label="Crisis reference">
+  <span class="crisis-float-icon">!</span>
+  <span>Crisis</span>
+</a>
+</body>
+</html>

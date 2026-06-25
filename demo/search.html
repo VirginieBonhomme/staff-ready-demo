@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search · Harbor &amp; Hearth</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="search-page">
+
+<div class="client-build-banner">
+  <div class="wrap">
+    <strong>This is what your restaurant looks like</strong>
+    <span>Harbor &amp; Hearth is a restaurant-branded version of the playbook; a client build uses that restaurant's name, roles, SOPs, checklists, and standards.</span>
+  </div>
+</div>
+
+<nav id="main-nav">
+  <div class="wrap">
+    <a class="nav-logo" href="index.html">Harbor &amp; Hearth</a>
+    <button class="nav-burger" id="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sops.html">SOPs</a></li>
+      <li><a href="doh-compliance.html">DOH Library</a></li>
+      <li><a href="opening-checklist.html">Checklist</a></li>
+      <li><a href="line-cook.html">Role</a></li>
+      <li><a href="search.html">Search</a></li>
+      <li><a href="crisis.html" class="nav-crisis">Crisis</a></li>
+      <li><a href="owner.html" class="nav-search-link">Owner View</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="search-header">
+      <p class="sop-kicker">Find It Fast</p>
+      <h1>Search The Playbook</h1>
+      <div class="search-input-wrap">
+        <span class="search-icon">/</span>
+        <input class="search-input" id="demo-search" type="search" placeholder="Search allergens, opening, sanitizer, line cook..." autocomplete="off" spellcheck="false">
+      </div>
+      <div class="search-hints">
+        <span class="search-hints-label">Try</span>
+        <button class="search-hint-pill" type="button" data-query="allergen">allergen</button>
+        <button class="search-hint-pill" type="button" data-query="opening">opening</button>
+        <button class="search-hint-pill" type="button" data-query="temperature">temperature</button>
+        <button class="search-hint-pill" type="button" data-query="crisis">crisis</button>
+      </div>
+    </div>
+
+    <p class="search-count" id="search-count">Showing key staff results</p>
+    <div class="search-results" id="search-results">
+      <article class="search-result" data-terms="opening checklist open prep room service setup temperature sanitizer google form">
+        <a href="opening-checklist.html">
+          <span class="search-result-category">Checklist</span>
+          <span class="search-result-title">Opening Checklist</span>
+          <span class="search-result-excerpt">Progress count, food safety setup, dining room checks, and Google Form submission.</span>
+        </a>
+      </article>
+      <article class="search-result" data-terms="allergen allergy cross contact guest ticket expo clean tools">
+        <a href="allergen-handling.html">
+          <span class="search-result-category">SOP</span>
+          <span class="search-result-title">Allergen Handling</span>
+          <span class="search-result-excerpt">Fast key actions plus the full SOP for allergen tickets and cross-contact prevention.</span>
+        </a>
+      </article>
+      <article class="search-result" data-terms="line cook role station service handover prep ticket">
+        <a href="line-cook.html">
+          <span class="search-result-category">Role</span>
+          <span class="search-result-title">Line Cook Role Guide</span>
+          <span class="search-result-excerpt">The SOPs, checklists, and shift priorities a line cook needs during service.</span>
+        </a>
+      </article>
+      <article class="search-result" data-terms="recipe short rib braise beef yield portion allergen pickup plating reheat">
+        <a href="recipe-short-rib.html">
+          <span class="search-result-category">Recipe</span>
+          <span class="search-result-title">Braised Short Rib</span>
+          <span class="search-result-excerpt">Recipe card with batch yield, allergens, prep method, service pickup, quality standards, and records.</span>
+        </a>
+      </article>
+      <article class="search-result" data-terms="temperature log cold holding hot holding doh thermometer cooling reheating">
+        <a href="doh-time-temperature-control.html">
+          <span class="search-result-category">DOH Library</span>
+          <span class="search-result-title">Time & Temperature Control</span>
+          <span class="search-result-excerpt">DOH-informed holding, cooking, cooling, reheating, and time-control standards.</span>
+        </a>
+      </article>
+      <article class="search-result" data-terms="sanitizer warewashing dish machine chlorine quaternary three sink">
+        <a href="doh-warewashing-sanitizing.html">
+          <span class="search-result-category">DOH Library</span>
+          <span class="search-result-title">Warewashing & Sanitizing</span>
+          <span class="search-result-excerpt">Manual warewashing, sanitizer strengths, wiping cloths, and dish machine checks.</span>
+        </a>
+      </article>
+      <article class="search-result" data-terms="crisis emergency allergy injury power outage equipment failure manager">
+        <a href="crisis.html">
+          <span class="search-result-category">Crisis</span>
+          <span class="search-result-title">Crisis Reference</span>
+          <span class="search-result-excerpt">One-tap actions for allergen reactions, injuries, power failures, and equipment issues.</span>
+        </a>
+      </article>
+      <article class="search-result" data-terms="pricing plans cost package launch onsite custom premium setup monthly">
+        <a href="pricing.html">
+          <span class="search-result-category">Pricing</span>
+          <span class="search-result-title">Plans &amp; Pricing</span>
+          <span class="search-result-excerpt">Clear setup fees, monthly support, included scope, add-ons, and best-fit guidance.</span>
+        </a>
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>Harbor &amp; Hearth &middot; <a href="index.html">Home</a> &middot; <a href="owner.html">Owner View</a></p>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('main-nav');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+
+  const input = document.getElementById('demo-search');
+  const results = Array.from(document.querySelectorAll('.search-result'));
+  const count = document.getElementById('search-count');
+  const params = new URLSearchParams(location.search);
+  input.value = params.get('q') || '';
+
+  function filterResults() {
+    const q = input.value.trim().toLowerCase();
+    let shown = 0;
+    results.forEach((item) => {
+      const text = item.textContent.toLowerCase() + ' ' + item.dataset.terms;
+      const match = !q || text.includes(q);
+      item.hidden = !match;
+      if (match) shown += 1;
+    });
+    count.textContent = q ? shown + ' result' + (shown === 1 ? '' : 's') + ' for "' + q + '"' : 'Showing key staff results';
+  }
+
+  document.querySelectorAll('.search-hint-pill').forEach((button) => {
+    button.addEventListener('click', () => {
+      input.value = button.dataset.query;
+      filterResults();
+      input.focus();
+    });
+  });
+  input.addEventListener('input', filterResults);
+  filterResults();
+</script>
+
+<a class="crisis-float" href="crisis.html" aria-label="Crisis reference">
+  <span class="crisis-float-icon">!</span>
+  <span>Crisis</span>
+</a>
+</body>
+</html>
