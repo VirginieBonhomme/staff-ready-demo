@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crisis Reference · Harbor &amp; Hearth</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="wrap">
+    <a class="nav-logo" href="index.html">Harbor &amp; Hearth</a>
+    <button class="nav-burger" id="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sops.html">SOPs</a></li>
+      <li><a href="doh-compliance.html">DOH Library</a></li>
+      <li><a href="opening-checklist.html">Checklist</a></li>
+      <li><a href="line-cook.html">Role</a></li>
+      <li><a href="crisis.html" class="nav-crisis">Crisis</a></li>
+      <li><a href="owner.html" class="nav-search-link">Owner View</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="page-header">
+      <h1>Crisis Reference</h1>
+      <div class="meta">
+        <span><span class="meta-dot"></span> Emergency Actions</span>
+        <span><span class="meta-dot"></span> Harbor &amp; Hearth</span>
+      </div>
+    </div>
+
+    <section class="crisis-911-block">
+      <div>
+        <span class="crisis-label">Life safety emergency</span>
+        <div class="crisis-911-number">911</div>
+      </div>
+      <a class="crisis-call-button" href="tel:911">Call 911</a>
+    </section>
+
+    <div class="crisis-grid">
+      <article class="crisis-card">
+        <span class="crisis-card-type type-safety">Safety</span>
+        <h3>Guest allergen reaction</h3>
+        <ol class="crisis-steps">
+          <li class="crisis-step">Call 911 if breathing, swelling, collapse, or severe symptoms occur.</li>
+          <li class="crisis-step">Notify the manager and stop the table&rsquo;s food service.</li>
+          <li class="crisis-step">Preserve the ticket and any remaining food for review.</li>
+        </ol>
+        <p class="crisis-escalate"><strong>Escalate:</strong> General manager and chef immediately.</p>
+      </article>
+
+      <article class="crisis-card">
+        <span class="crisis-card-type type-food">Food Safety</span>
+        <h3>Walk-in fridge failure</h3>
+        <ol class="crisis-steps">
+          <li class="crisis-step">Check and record the temperature immediately.</li>
+          <li class="crisis-step">Keep the door closed and move high-risk food only with manager approval.</li>
+          <li class="crisis-step">Start corrective action log and call maintenance.</li>
+        </ol>
+        <p class="crisis-escalate"><strong>Escalate:</strong> Kitchen manager before using any affected food.</p>
+      </article>
+
+      <article class="crisis-card">
+        <span class="crisis-card-type type-ops">Operations</span>
+        <h3>Power outage</h3>
+        <ol class="crisis-steps">
+          <li class="crisis-step">Stop cooking equipment and secure open flames.</li>
+          <li class="crisis-step">Hold service until manager confirms guest and food safety.</li>
+          <li class="crisis-step">Record affected refrigeration, payments, and open checks.</li>
+        </ol>
+        <p class="crisis-escalate"><strong>Escalate:</strong> Manager, utility provider, and owner.</p>
+      </article>
+    </div>
+
+    <div class="section-label">Continue</div>
+    <div class="quick-links">
+      <a class="quick-link" href="index.html"><span class="ql-label">Home</span><span class="ql-name">Home</span><span class="ql-arrow">&rarr;</span></a>
+      <a class="quick-link" href="allergen-handling.html"><span class="ql-label">SOP</span><span class="ql-name">Allergen Handling</span><span class="ql-arrow">&rarr;</span></a>
+      <a class="quick-link" href="owner.html"><span class="ql-label">Owner</span><span class="ql-name">Owner View</span><span class="ql-arrow">&rarr;</span></a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>Harbor &amp; Hearth &middot; <a href="index.html">Home</a> &middot; <a href="owner.html">Owner View</a></p>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('main-nav');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[CHECKLIST_TITLE] · [RESTAURANT_NAME]</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script defer src="../assets/checklist-progress.js"></script>
+</head>
+<body>
+
+<main>
+  <div class="wrap check-doc">
+
+    <div class="sop-reference-bar">
+      <div>[RESTAURANT_NAME] <span>Checklist</span></div>
+      <div>[SHIFT_OR_AREA]</div>
+    </div>
+
+    <p class="sop-kicker">[CHECKLIST_TYPE] &middot; [SHIFT_OR_AREA]</p>
+    <h1 class="check-title">[CHECKLIST_TITLE]</h1>
+
+    <div class="check-status-grid" aria-label="Checklist details">
+      <div class="check-status-card">
+        <span class="label">Area</span>
+        <span class="value">[AREA]</span>
+      </div>
+      <div class="check-status-card">
+        <span class="label">Owner</span>
+        <span class="value">[OWNER_ROLE]</span>
+      </div>
+      <div class="check-status-card">
+        <span class="label">Due</span>
+        <span class="value">[DUE_TIME]</span>
+      </div>
+    </div>
+
+    <div class="print-fields">
+      <span class="print-field">Date</span>
+      <span class="print-field">Shift</span>
+      <span class="print-field">Signed by</span>
+    </div>
+
+    <p class="check-summary">[ONE_SENTENCE_CHECKLIST_SUMMARY]</p>
+
+    <section class="check-section">
+      <div class="check-section-heading">
+        <h2>1. [SECTION_TITLE]</h2>
+        <span class="check-section-tag">Check</span>
+      </div>
+      <div class="check-items">
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>[ITEM_GROUP]</strong><span>[CHECKLIST_ITEM_1]</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>[ITEM_GROUP]</strong><span>[CHECKLIST_ITEM_2]</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>[ITEM_GROUP]</strong><span>[CHECKLIST_ITEM_3]</span></span>
+        </label>
+      </div>
+    </section>
+
+    <section class="check-section">
+      <div class="check-section-heading">
+        <h2>2. [SECTION_TITLE]</h2>
+        <span class="check-section-tag">Check</span>
+      </div>
+      <div class="check-items">
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>[ITEM_GROUP]</strong><span>[CHECKLIST_ITEM_4]</span></span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span><strong>[ITEM_GROUP]</strong><span>[CHECKLIST_ITEM_5]</span></span>
+        </label>
+      </div>
+    </section>
+
+    <p class="check-note">[MANAGER_SIGNOFF_OR_ESCALATION_NOTE]</p>
+
+  </div>
+</main>
+
+</body>
+</html>

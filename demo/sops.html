@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOP Library · Harbor &amp; Hearth</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="wrap">
+    <a class="nav-logo" href="index.html">Harbor &amp; Hearth</a>
+    <button class="nav-burger" id="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sops.html">SOPs</a></li>
+      <li><a href="doh-compliance.html">DOH Library</a></li>
+      <li><a href="opening-checklist.html">Checklist</a></li>
+      <li><a href="line-cook.html">Role</a></li>
+      <li><a href="crisis.html" class="nav-crisis">Crisis</a></li>
+      <li><a href="owner.html" class="nav-search-link">Owner View</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="page-header">
+      <h1>SOP Library</h1>
+      <div class="meta">
+        <span><span class="meta-dot"></span> Operations Playbook</span>
+        <span><span class="meta-dot"></span> Staff Reference</span>
+      </div>
+    </div>
+
+    <p style="color:var(--text-muted);font-size:.95rem;line-height:1.78;margin-bottom:36px;">Use this page to show that the playbook can handle different types of restaurant standards: critical food safety, hygiene, logging, and shift handoff.</p>
+
+    <div class="section-label">SOP Examples</div>
+    <div class="card-grid">
+      <a class="card" href="doh-compliance.html">
+        <span class="card-label">DOH</span>
+        <h3>DOH-Informed Food Safety Library</h3>
+        <p>Health-code-based SOP set for temperature, cooling, sanitizing, employee health, receiving, pests, and inspections.</p>
+      </a>
+      <a class="card" href="doh-consumer-advisory.html">
+        <span class="card-label">Menu</span>
+        <h3>Consumer Advisory</h3>
+        <p>Shows how raw, undercooked, and cooked-to-order menu risks are handled in the playbook.</p>
+      </a>
+      <a class="card" href="allergen-handling.html">
+        <span class="card-label">Critical</span>
+        <h3>Allergen Handling</h3>
+        <p>Guest allergy flow with key actions, clean setup, photos, and corrective action.</p>
+      </a>
+      <a class="card" href="sop-handwashing.html">
+        <span class="card-label">Hygiene</span>
+        <h3>Handwashing Procedure</h3>
+        <p>A visual training SOP for all staff with simple step-by-step photos.</p>
+      </a>
+      <a class="card" href="sop-temp-logging.html">
+        <span class="card-label">Food Safety</span>
+        <h3>Temperature Logging</h3>
+        <p>Shows how food safety checks, limits, and corrective action can be structured.</p>
+      </a>
+      <a class="card" href="sop-station-handover.html">
+        <span class="card-label">Shift</span>
+        <h3>Station Handover</h3>
+        <p>Service-facing SOP for consistency between outgoing and incoming cooks.</p>
+      </a>
+    </div>
+
+    <div class="section-label">Quick Path</div>
+    <div class="quick-links">
+      <a class="quick-link" href="doh-compliance.html"><span class="ql-label">DOH</span><span class="ql-name">Compliance Library</span><span class="ql-arrow">&rarr;</span></a>
+      <a class="quick-link" href="opening-checklist.html"><span class="ql-label">Next</span><span class="ql-name">Opening Checklist</span><span class="ql-arrow">&rarr;</span></a>
+      <a class="quick-link" href="line-cook.html"><span class="ql-label">Role</span><span class="ql-name">Line Cook</span><span class="ql-arrow">&rarr;</span></a>
+      <a class="quick-link" href="owner.html"><span class="ql-label">Owner</span><span class="ql-name">Owner View</span><span class="ql-arrow">&rarr;</span></a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>Harbor &amp; Hearth &middot; <a href="index.html">Home</a> &middot; <a href="owner.html">Owner View</a></p>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('main-nav');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+</script>
+
+<a class="crisis-float" href="crisis.html" aria-label="Crisis reference">
+  <span class="crisis-float-icon">!</span>
+  <span>Crisis</span>
+</a>
+</body>
+</html>

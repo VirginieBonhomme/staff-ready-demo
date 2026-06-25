@@ -98,7 +98,7 @@ function processFile(filePath) {
 }
 
 // ── Walk ──────────────────────────────────────────────────────────────────────
-const SKIP_DIRS = new Set(['assets', 'tools', '.git', 'node_modules']);
+const SKIP_DIRS = new Set(['assets', 'tools', 'template', 'demo', '.git', 'node_modules']);
 
 function walk(dir, files = []) {
   for (const entry of fs.readdirSync(dir).sort()) {
