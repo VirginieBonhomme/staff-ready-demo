@@ -91,6 +91,11 @@ strong { font-weight: 600; }
 }
 .nav-links > li > a:hover { color: #fff; }
 
+.nav-links-compact > li > a {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
 /* Dropdown chevron via CSS */
 .has-dropdown > a::after {
   content: '';
@@ -190,6 +195,10 @@ strong { font-weight: 600; }
     flex-direction: row;
     align-items: center;
     gap: 2px;
+  }
+
+  .nav-links-compact {
+    gap: 6px;
   }
 }
 
@@ -395,6 +404,35 @@ main { padding-bottom: 100px; }
   margin-top: 9px;
 }
 
+.client-build-banner {
+  background: #f3eee6;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-main);
+}
+
+.client-build-banner .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.client-build-banner strong {
+  color: var(--brand-primary);
+  font-size: .78rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.client-build-banner span {
+  color: var(--text-muted);
+  font-size: .86rem;
+  line-height: 1.45;
+}
+
 .sop-section {
   margin-top: 36px;
 }
@@ -558,6 +596,18 @@ main { padding-bottom: 100px; }
 @media (max-width: 520px) {
   .sop-reference-bar { flex-direction: column; gap: 6px; }
   .sop-reference-bar span { display: block; margin: 4px 0 0; }
+}
+
+@media (max-width: 640px) {
+  .client-build-banner .wrap {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .client-build-banner strong {
+    white-space: normal;
+  }
 }
 
 /* ── Checklist Document Layout ─────────────────── */
@@ -755,6 +805,10 @@ main { padding-bottom: 100px; }
   gap: 12px;
   align-items: center;
   margin-top: 22px;
+}
+
+.check-actions-primary {
+  margin: 14px 0 22px;
 }
 
 @media (min-width: 640px) {
