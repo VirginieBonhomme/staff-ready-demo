@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harbor &amp; Hearth · Operations Playbook</title>
+  <title>Peaches · Operations Playbook</title>
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -11,14 +11,13 @@
 <div class="client-build-banner">
   <div class="wrap">
     <strong>This is what your restaurant looks like</strong>
-    <span>Harbor &amp; Hearth is a restaurant-branded version of the playbook; a client build uses that restaurant's name, roles, SOPs, checklists, and standards.</span>
+    <span>Peaches is a restaurant-branded version of the playbook; a client build uses that restaurant's name, roles, SOPs, checklists, recipes, and standards.</span>
   </div>
 </div>
 
-
 <nav id="main-nav">
   <div class="wrap">
-    <a class="nav-logo" href="index.html">Harbor &amp; Hearth</a>
+    <a class="nav-logo" href="index.html">Peaches</a>
     <button class="nav-burger" id="burger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -27,10 +26,10 @@
       <li><a href="sops.html">SOPs</a></li>
       <li><a href="doh-compliance.html">DOH Library</a></li>
       <li><a href="opening-checklist.html">Checklist</a></li>
-      <li><a href="line-cook.html">Role</a></li>
+      <li data-role="foh"><a href="foh-role.html">My Role</a></li>
+      <li data-role="boh"><a href="line-cook.html">My Role</a></li>
       <li><a href="search.html">Search</a></li>
       <li><a href="crisis.html" class="nav-crisis">Crisis</a></li>
-      <li><a href="owner.html" class="nav-search-link">Owner View</a></li>
     </ul>
   </div>
 </nav>
@@ -39,82 +38,90 @@
   <div class="wrap">
 
     <div class="dashboard-hero">
-      <span class="eyebrow">Operations Playbook</span>
-      <h1>A custom ops playbook your staff can actually use.</h1>
-      <p>Built from the restaurant&rsquo;s real standards, roles, checklists, food safety reference needs, and emergency procedures. The playbook shows what staff see on shift and what managers can standardize behind the scenes.</p>
+      <span class="eyebrow">Peaches</span>
+      <h1>What do you need right now?</h1>
+      <p>Search the playbook or jump straight to the checklist, SOP, role guide, recipe, or emergency reference you need during service.</p>
       <form class="hero-search" action="search.html">
-        <input class="hero-search-input" type="search" name="q" placeholder="Search allergens, opening, line cook..." autocomplete="off" spellcheck="false">
+        <input class="hero-search-input" type="search" name="q" placeholder="Search allergens, opening, sanitizer, short rib..." autocomplete="off" spellcheck="false">
         <button class="hero-search-btn" type="submit">&#x2192;</button>
       </form>
       <div class="hero-quick-chips" aria-label="Shortcuts">
-        <a href="opening-checklist.html">Opening Checklist</a>
-        <a href="allergen-handling.html">Allergen SOP</a>
-        <a href="line-cook.html">Role Guide</a>
-        <a href="doh-compliance.html">DOH Library</a>
-        <a href="search.html">Search</a>
+        <a href="opening-checklist.html">Opening</a>
+        <a href="allergen-handling.html">Allergens</a>
+        <a href="line-cook.html" data-role="boh">Line Cook</a>
+        <a href="recipe-short-rib.html" data-role="boh">Short Rib</a>
+        <a href="doh-compliance.html">Food Safety</a>
         <a href="crisis.html">Crisis</a>
+        <a href="foh-role.html" data-role="foh">FOH</a>
+        <a href="onboarding.html">New Hire</a>
       </div>
     </div>
 
-    <section class="alert-block">
-      <strong>The problem this solves:</strong> staff asking the same questions, opening and closing from memory, SOPs buried in binders or Google Drive, and managers repeating standards during service instead of running the floor.
-    </section>
-
     <section class="role-route-panel" aria-labelledby="route-title">
       <div class="role-route-heading">
-        <span class="section-label-inline">Recommended Flow</span>
-        <h2 id="route-title">Start with the five moments staff and managers use most often.</h2>
+        <span class="section-label-inline">Start Here</span>
+        <h2 id="route-title">Choose the task that matches your shift.</h2>
       </div>
       <div class="role-route-grid">
         <a class="role-route-card" href="opening-checklist.html">
           <span class="role-route-label">I'm opening</span>
           <strong>Opening checklist</strong>
-          <span>Mobile task flow with progress, clear blockers, and less manager chasing.</span>
+          <span>Food safety, station setup, dining room readiness, and progress count.</span>
         </a>
         <a class="role-route-card" href="allergen-handling.html">
-          <span class="role-route-label">I need an allergen answer</span>
+          <span class="role-route-label">Guest allergy</span>
           <strong>Allergen handling</strong>
-          <span>Fast key actions plus the full procedure when staff need detail.</span>
+          <span>Confirm, clean setup, prevent cross-contact, and escalate when needed.</span>
         </a>
-        <a class="role-route-card" href="line-cook.html">
-          <span class="role-route-label">I'm a line cook</span>
+        <a class="role-route-card" href="foh-role.html" data-role="foh">
+          <span class="role-route-label">My role</span>
+          <strong>Front of house guide</strong>
+          <span>Service priorities, allergen standards, and shift references for FOH staff.</span>
+        </a>
+        <a class="role-route-card" href="line-cook.html" data-role="boh">
+          <span class="role-route-label">My role</span>
           <strong>Line cook guide</strong>
-          <span>Role-specific SOPs, checklists, and shift priorities without extra browsing.</span>
+          <span>Shift priorities, station standards, and related kitchen references.</span>
         </a>
-        <a class="role-route-card" href="doh-compliance.html">
-          <span class="role-route-label">I need food safety</span>
-          <strong>DOH library</strong>
-          <span>Turns health-code requirements into usable daily SOPs and inspection prep.</span>
+        <a class="role-route-card" href="recipe-short-rib.html" data-role="boh">
+          <span class="role-route-label">Menu item</span>
+          <strong>Braised short rib</strong>
+          <span>Yield, allergens, pickup, plating, food safety checks, and records.</span>
         </a>
-        <a class="role-route-card" href="crisis.html">
-          <span class="role-route-label">Something went wrong</span>
-          <strong>Crisis reference</strong>
-          <span>One-tap actions for allergy reactions, injuries, outages, and equipment failure.</span>
+        <a class="role-route-card" href="doh-time-temperature-control.html">
+          <span class="role-route-label">Food safety</span>
+          <strong>Time &amp; temperature</strong>
+          <span>Cooking, holding, cooling, reheating, time control, and corrective action.</span>
+        </a>
+        <a class="role-route-card" href="onboarding.html">
+          <span class="role-route-label">New hire</span>
+          <strong>Onboarding guide</strong>
+          <span>Day one essentials, required SOPs, and where to look during service.</span>
         </a>
       </div>
     </section>
 
-    <div class="section-label">What Changes For Your Restaurant</div>
+    <div class="section-label">Today&rsquo;s Priorities</div>
     <div class="updated-list">
       <div class="updated-item">
-        <span class="updated-date">Less</span>
-        <span class="updated-title">Your team has a clear first place to look before asking the same questions during rushes.</span>
-        <span class="updated-tag">Time</span>
+        <span class="updated-date">Open</span>
+        <span class="updated-title">Complete the opening checklist before food prep and service setup are marked ready.</span>
+        <span class="updated-tag">Checklist</span>
+      </div>
+      <div class="updated-item" data-role="boh">
+        <span class="updated-date">Line</span>
+        <span class="updated-title">Check cold holding, sanitizer, labels, and backup mise before the first ticket.</span>
+        <span class="updated-tag">Kitchen</span>
+      </div>
+      <div class="updated-item" data-role="foh">
+        <span class="updated-date">FOH</span>
+        <span class="updated-title">Escalate allergy questions before promising an item is safe for a guest.</span>
+        <span class="updated-tag">Allergens</span>
       </div>
       <div class="updated-item">
-        <span class="updated-date">Cleaner</span>
-        <span class="updated-title">Your opening, closing, food safety, and role standards are followed the same way.</span>
-        <span class="updated-tag">Consistency</span>
-      </div>
-      <div class="updated-item">
-        <span class="updated-date">Faster</span>
-        <span class="updated-title">Your new staff learn from the same playbook instead of piecing together tribal knowledge.</span>
-        <span class="updated-tag">Training</span>
-      </div>
-      <div class="updated-item">
-        <span class="updated-date">Safer</span>
-        <span class="updated-title">Your allergen procedures, DOH-informed standards, logs, and crisis actions are no longer scattered.</span>
-        <span class="updated-tag">Risk</span>
+        <span class="updated-date">Manager</span>
+        <span class="updated-title">Review temperature, sanitizer, and corrective action records before the rush.</span>
+        <span class="updated-tag">Records</span>
       </div>
     </div>
 
@@ -124,21 +131,21 @@
       <span class="crisis-homepage-arrow">&rarr;</span>
     </a>
 
-    <div class="section-label">Explore More</div>
+    <div class="section-label">Library</div>
     <div class="quick-links">
-      <a class="quick-link" href="sops.html"><span class="ql-label">Library</span><span class="ql-name">More SOP examples</span><span class="ql-arrow">&rarr;</span></a>
-      <a class="quick-link" href="sop-temp-logging.html"><span class="ql-label">Food Safety</span><span class="ql-name">Temperature logging</span><span class="ql-arrow">&rarr;</span></a>
-      <a class="quick-link" href="sop-handwashing.html"><span class="ql-label">Training</span><span class="ql-name">Visual handwashing SOP</span><span class="ql-arrow">&rarr;</span></a>
-      <a class="quick-link" href="sop-station-handover.html"><span class="ql-label">Service</span><span class="ql-name">Station handover</span><span class="ql-arrow">&rarr;</span></a>
-      <a class="quick-link" href="recipe-short-rib.html"><span class="ql-label">Recipe</span><span class="ql-name">Braised short rib</span><span class="ql-arrow">&rarr;</span></a>
-      <a class="quick-link" href="pricing.html"><span class="ql-label">Pricing</span><span class="ql-name">Plans and pricing</span><span class="ql-arrow">&rarr;</span></a>
+      <a class="quick-link" href="sops.html"><span class="ql-label">SOPs</span><span class="ql-name">Procedure Library</span><span class="ql-arrow">&rarr;</span></a>
+      <a class="quick-link" href="doh-compliance.html"><span class="ql-label">Food Safety</span><span class="ql-name">DOH-Informed Library</span><span class="ql-arrow">&rarr;</span></a>
+      <a class="quick-link" href="opening-checklist.html"><span class="ql-label">Shift</span><span class="ql-name">Opening Checklist</span><span class="ql-arrow">&rarr;</span></a>
+      <a class="quick-link" href="line-cook.html" data-role="boh"><span class="ql-label">Role</span><span class="ql-name">Line Cook Guide</span><span class="ql-arrow">&rarr;</span></a>
+      <a class="quick-link" href="recipe-short-rib.html" data-role="boh"><span class="ql-label">Recipe</span><span class="ql-name">Braised Short Rib</span><span class="ql-arrow">&rarr;</span></a>
+      <a class="quick-link" href="search.html"><span class="ql-label">Find</span><span class="ql-name">Search Everything</span><span class="ql-arrow">&rarr;</span></a>
     </div>
 
   </div>
 </main>
 
 <footer>
-  <p>Harbor &amp; Hearth &middot; <a href="index.html">Home</a> &middot; <a href="owner.html">Owner View</a></p>
+  <p>Peaches &middot; <a href="index.html">Home</a> &middot; <a href="pitch.html">Project &amp; Pricing</a></p>
 </footer>
 
 <script>
@@ -148,6 +155,15 @@
     burger.classList.toggle('open');
     nav.classList.toggle('open');
   });
+
+  (function() {
+    const role = sessionStorage.getItem('hhRole');
+    if (!role) return;
+    const hide = role === 'foh' ? 'boh' : 'foh';
+    document.querySelectorAll('[data-role="' + hide + '"]').forEach(function(el) {
+      el.hidden = true;
+    });
+  })();
 </script>
 
 <a class="crisis-float" href="crisis.html" aria-label="Crisis reference">
