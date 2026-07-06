@@ -18,10 +18,8 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="sops.html">SOPs</a></li>
       <li><a href="doh-compliance.html">DOH Library</a></li>
-      <li data-role="foh"><a href="foh-checklist.html">Checklist</a></li>
-      <li data-role="boh"><a href="opening-checklist.html">Checklist</a></li>
-      <li data-role="foh"><a href="foh-role.html">My Role</a></li>
-      <li data-role="boh"><a href="line-cook.html">My Role</a></li>
+      <li><a href="login.html" id="nav-checklist">Checklist</a></li>
+      <li><a href="login.html" id="nav-role">My Role</a></li>
       <li><a href="search.html">Search</a></li>
       <li><a href="crisis.html" class="nav-crisis">Crisis</a></li>
       
@@ -105,6 +103,13 @@
 
   (function() {
     const role = sessionStorage.getItem('hhRole');
+    if (role === 'foh') {
+      document.getElementById('nav-checklist').href = 'foh-checklist.html';
+      document.getElementById('nav-role').href = 'foh-role.html';
+    } else if (role === 'boh') {
+      document.getElementById('nav-checklist').href = 'opening-checklist.html';
+      document.getElementById('nav-role').href = 'line-cook.html';
+    }
     if (!role) return;
     const hide = role === 'foh' ? 'boh' : 'foh';
     document.querySelectorAll('[data-role="' + hide + '"]').forEach(function(el) {
