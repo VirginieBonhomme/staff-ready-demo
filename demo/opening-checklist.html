@@ -3,19 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Opening Checklist · Peaches</title>
+  <title>Kitchen Opening Checklist · Peaches</title>
   <link rel="stylesheet" href="../assets/style.css">
   <script defer src="../assets/checklist-progress.js"></script>
 </head>
 <body>
-
-<div class="client-build-banner">
-  <div class="wrap">
-    <strong>This is what your restaurant looks like</strong>
-    <span>Peaches is a restaurant-branded version of the playbook; a client build uses that restaurant's name, roles, SOPs, checklists, and standards.</span>
-  </div>
-</div>
-
+<script>(function(){if(sessionStorage.getItem('hhRole')!=='boh'){sessionStorage.setItem('hhReturn',location.href);location.replace('login.html');}}());</script>
 
 <nav id="main-nav">
   <div class="wrap">
@@ -45,12 +38,12 @@
     </div>
 
     <p class="sop-kicker">Operations &middot; Opening</p>
-    <h1 class="check-title">Opening Checklist</h1>
+    <h1 class="check-title">Kitchen Opening Checklist</h1>
 
     <div class="check-status-grid" aria-label="Checklist details">
       <div class="check-status-card">
         <span class="label">Area</span>
-        <span class="value">Kitchen + Dining Room</span>
+        <span class="value">Kitchen</span>
       </div>
       <div class="check-status-card">
         <span class="label">Owner</span>
@@ -64,15 +57,15 @@
 
     <div class="print-fields"><span class="print-field">Date</span><span class="print-field">Shift</span><span class="print-field">Signed by</span></div>
 
-    <p class="check-summary">Complete the food safety checks first, then finish room setup and service readiness before the first guest arrives.</p>
+    <p class="check-summary">Complete food safety checks first, then set the line, prep, allergen tools, and service notes before the kitchen opens.</p>
 
     <div class="check-actions check-actions-primary">
-      <a class="btn btn-accent btn-arrow" href="google-form.html">Open Google Form</a>
+      <a class="btn btn-accent btn-arrow" href="https://docs.google.com/forms/d/e/1FAIpQLSfo9dZzVPZp4du8KDMzkrY5UEMdNY_FBAJK7JKhgtIfy4YYqA/viewform?usp=publish-editor" target="_blank" rel="noopener">Open Google Form</a>
     </div>
 
 
     <section class="alert-block">
-      <strong>Owner note:</strong> this makes opening visible. Staff can see exactly what is left, and managers can use the same checklist to coach consistency across shifts.
+      <strong>Manager note:</strong> this makes kitchen opening visible. Staff can see exactly what is left, and managers can use the same checklist to coach consistency across shifts.
     </section>
 
     <section class="check-section">
@@ -121,31 +114,6 @@
         <label class="check-item">
           <input type="checkbox">
           <span><strong>Service</strong><span>Read specials, 86 list, bookings, and expected rush timing.</span></span>
-        </label>
-      </div>
-    </section>
-
-    <section class="check-section">
-      <div class="check-section-heading">
-        <h2>3. Dining Room</h2>
-        <span class="check-section-tag">Check</span>
-      </div>
-      <div class="check-items">
-        <label class="check-item">
-          <input type="checkbox">
-          <span><strong>Room</strong><span>Walk every table, chair, restroom, entrance, and waiting area.</span></span>
-        </label>
-        <label class="check-item">
-          <input type="checkbox">
-          <span><strong>Systems</strong><span>Test POS, card terminals, printers, music, lighting, and phones.</span></span>
-        </label>
-        <label class="check-item">
-          <input type="checkbox">
-          <span><strong>Brief</strong><span>Confirm sections, reservations, VIPs, allergies, and handoff notes.</span></span>
-        </label>
-        <label class="check-item">
-          <input type="checkbox">
-          <span><strong>Manager</strong><span>Escalate blockers before doors open, not during first seating.</span></span>
         </label>
       </div>
     </section>

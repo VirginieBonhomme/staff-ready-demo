@@ -8,13 +8,6 @@
 </head>
 <body class="search-page">
 
-<div class="client-build-banner">
-  <div class="wrap">
-    <strong>This is what your restaurant looks like</strong>
-    <span>Peaches is a restaurant-branded version of the playbook; a client build uses that restaurant's name, roles, SOPs, checklists, and standards.</span>
-  </div>
-</div>
-
 <nav id="main-nav">
   <div class="wrap">
     <a class="nav-logo" href="index.html">Peaches</a>
@@ -25,8 +18,10 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="sops.html">SOPs</a></li>
       <li><a href="doh-compliance.html">DOH Library</a></li>
-      <li><a href="opening-checklist.html">Checklist</a></li>
-      <li><a href="line-cook.html">Role</a></li>
+      <li data-role="foh"><a href="foh-checklist.html">Checklist</a></li>
+      <li data-role="boh"><a href="opening-checklist.html">Checklist</a></li>
+      <li data-role="foh"><a href="foh-role.html">My Role</a></li>
+      <li data-role="boh"><a href="line-cook.html">My Role</a></li>
       <li><a href="search.html">Search</a></li>
       <li><a href="crisis.html" class="nav-crisis">Crisis</a></li>
       <li><a href="owner.html" class="nav-search-link">Owner View</a></li>
@@ -54,11 +49,18 @@
 
     <p class="search-count" id="search-count">Showing key staff results</p>
     <div class="search-results" id="search-results">
-      <article class="search-result" data-terms="opening checklist open prep room service setup temperature sanitizer google form">
+      <article class="search-result" data-terms="kitchen opening checklist open prep line service setup temperature sanitizer google form" data-role="boh">
         <a href="opening-checklist.html">
           <span class="search-result-category">Checklist</span>
-          <span class="search-result-title">Opening Checklist</span>
-          <span class="search-result-excerpt">Progress count, food safety setup, dining room checks, and Google Form submission.</span>
+          <span class="search-result-title">Kitchen Opening Checklist</span>
+          <span class="search-result-excerpt">Progress count, food safety setup, line readiness, prep checks, and Google Form submission.</span>
+        </a>
+      </article>
+      <article class="search-result" data-terms="foh opening checklist front of house dining room service station host stand reservations menus setup google form" data-role="foh">
+        <a href="foh-checklist.html">
+          <span class="search-result-category">Checklist</span>
+          <span class="search-result-title">FOH Opening Checklist</span>
+          <span class="search-result-excerpt">Dining room, service station, host stand, uniform, reservations, and specials review before doors open.</span>
         </a>
       </article>
       <article class="search-result" data-terms="allergen allergy cross contact guest ticket expo clean tools">
@@ -68,14 +70,14 @@
           <span class="search-result-excerpt">Fast key actions plus the full SOP for allergen tickets and cross-contact prevention.</span>
         </a>
       </article>
-      <article class="search-result" data-terms="line cook role station service handover prep ticket">
+      <article class="search-result" data-terms="line cook role station service handover prep ticket" data-role="boh">
         <a href="line-cook.html">
           <span class="search-result-category">Role</span>
           <span class="search-result-title">Line Cook Role Guide</span>
           <span class="search-result-excerpt">The SOPs, checklists, and shift priorities a line cook needs during service.</span>
         </a>
       </article>
-      <article class="search-result" data-terms="recipe short rib braise beef yield portion allergen pickup plating reheat">
+      <article class="search-result" data-terms="recipe short rib braise beef yield portion allergen pickup plating reheat" data-role="boh">
         <a href="recipe-short-rib.html">
           <span class="search-result-category">Recipe</span>
           <span class="search-result-title">Braised Short Rib</span>
@@ -103,7 +105,7 @@
           <span class="search-result-excerpt">One-tap actions for allergen reactions, injuries, power failures, and equipment issues.</span>
         </a>
       </article>
-      <article class="search-result" data-terms="front of house foh server host service role allergen guest allergy dining room opening checklist">
+      <article class="search-result" data-terms="front of house foh server host service role allergen guest allergy dining room opening checklist" data-role="foh">
         <a href="foh-role.html">
           <span class="search-result-category">Role</span>
           <span class="search-result-title">Front of House Role Guide</span>
@@ -115,20 +117,6 @@
           <span class="search-result-category">Role</span>
           <span class="search-result-title">New Hire Onboarding</span>
           <span class="search-result-excerpt">Day one essentials, required SOPs, first week priorities, and where to look during service.</span>
-        </a>
-      </article>
-      <article class="search-result" data-terms="pricing plans cost package launch onsite custom premium setup monthly">
-        <a href="pricing.html">
-          <span class="search-result-category">Pricing</span>
-          <span class="search-result-title">Plans &amp; Pricing</span>
-          <span class="search-result-excerpt">Clear setup fees, monthly support, included scope, add-ons, and best-fit guidance.</span>
-        </a>
-      </article>
-      <article class="search-result" data-terms="project overview pitch what you get build process pricing client view package">
-        <a href="pitch.html">
-          <span class="search-result-category">Project</span>
-          <span class="search-result-title">Project Overview</span>
-          <span class="search-result-excerpt">What the restaurant gets, how the build works, and where to review pricing.</span>
         </a>
       </article>
     </div>
@@ -148,10 +136,35 @@
   });
 
   const input = document.getElementById('demo-search');
-  const results = Array.from(document.querySelectorAll('.search-result'));
+  const allResults = Array.from(document.querySelectorAll('.search-result'));
   const count = document.getElementById('search-count');
   const params = new URLSearchParams(location.search);
   input.value = params.get('q') || '';
+
+  // Hide role-restricted results permanently before any text filtering
+  (function() {
+    const role = sessionStorage.getItem('hhRole');
+    if (!role) return;
+    const hide = role === 'foh' ? 'boh' : 'foh';
+    allResults.forEach(function(item) {
+      if (item.dataset.role === hide) {
+        item.dataset.roleHidden = 'true';
+        item.hidden = true;
+      }
+    });
+  })();
+
+  // Also apply role filtering to nav items
+  (function() {
+    const role = sessionStorage.getItem('hhRole');
+    if (!role) return;
+    const hide = role === 'foh' ? 'boh' : 'foh';
+    document.querySelectorAll('[data-role="' + hide + '"]').forEach(function(el) {
+      el.hidden = true;
+    });
+  })();
+
+  const results = allResults.filter(function(item) { return !item.dataset.roleHidden; });
 
   function filterResults() {
     const q = input.value.trim().toLowerCase();
