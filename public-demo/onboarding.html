@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Hire Onboarding · Peaches</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="wrap">
+    <a class="nav-logo" href="index.html">Peaches</a>
+    <button class="nav-burger" id="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="opening-checklist.html">Checklist</a></li>
+      <li><a href="allergen-handling.html">SOP</a></li>
+      <li><a href="line-cook.html">Role</a></li>
+      <li><a href="recipe-short-rib.html">Recipe</a></li>
+      <li><a href="onboarding.html">Onboarding</a></li>
+      <li><a href="search.html">Search</a></li>
+      <li><a href="crisis.html" class="nav-crisis">Crisis</a></li>
+      <li><a href="pricing.html" class="nav-search-link">Pricing</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+
+    <div class="page-header">
+      <h1>New Hire Onboarding</h1>
+      <div class="meta">
+        <span><span class="meta-dot"></span> All Roles</span>
+        <span><span class="meta-dot"></span> First Week</span>
+      </div>
+    </div>
+
+    <p style="color:var(--text-muted);margin-bottom:36px;font-size:.95rem;line-height:1.78;">Everything a new team member needs to get up to speed &mdash; food safety basics, how this restaurant runs, and where to look during service instead of guessing.</p>
+<div class="section-label">Start Here</div>
+    <div class="updated-list">
+      <div class="updated-item">
+        <span class="updated-date">Day 1</span>
+        <span class="updated-title">Read the handwashing SOP, the allergen handling SOP, and the opening checklist before your first shift.</span>
+        <span class="updated-tag">Required</span>
+      </div>
+      <div class="updated-item">
+        <span class="updated-date">First Week</span>
+        <span class="updated-title">Use the checklist every open. Never wing food safety &mdash; if you are unsure, stop and ask before proceeding.</span>
+        <span class="updated-tag">Standard</span>
+      </div>
+      <div class="updated-item">
+        <span class="updated-date">Always</span>
+        <span class="updated-title">Use Search to find any SOP, recipe, or reference fast. If it is not there, ask your manager to add it.</span>
+        <span class="updated-tag">Playbook</span>
+      </div>
+    </div>
+
+    <div class="section-label">Your SOPs</div>
+    <ul class="role-sop-list">
+      <li><a href="allergen-handling.html">Handwashing Procedure</a></li>
+      <li><a href="allergen-handling.html">Allergen Handling</a></li>
+      <li><a href="opening-checklist.html">Opening Checklist</a></li>
+      <li><a href="opening-checklist.html">Temperature Logging</a></li>
+      <li><a href="line-cook.html">Station Handover</a></li>
+      <li><a href="crisis.html">Crisis Reference</a></li>
+    </ul>
+
+    <div class="section-label">What You Need to Know</div>
+    <div class="card-grid">
+      <a class="card" href="allergen-handling.html">
+        <span class="card-label">Non-Negotiable</span>
+        <h3>Food Safety First</h3>
+        <p>Handwashing, glove use, allergen awareness, and temperature checks are required before anything else.</p>
+      </a>
+      <a class="card" href="opening-checklist.html">
+        <span class="card-label">Every Shift</span>
+        <h3>Use the Checklist</h3>
+        <p>Do not rely on memory for opening. Work through the checklist and submit the form when done.</p>
+      </a>
+      <a class="card" href="allergen-handling.html">
+        <span class="card-label">Critical</span>
+        <h3>Allergen Tickets</h3>
+        <p>If a guest has an allergy, stop and follow the SOP. Never guess or promise something is safe.</p>
+      </a>
+      <a class="card" href="crisis.html">
+        <span class="card-label">When in Doubt</span>
+        <h3>Escalate, Don&rsquo;t Guess</h3>
+        <p>Use the crisis reference for any emergency. If you are not sure what to do, ask your manager first.</p>
+      </a>
+    </div>
+
+    <div class="section-label">Continue</div>
+    <div class="quick-links">
+      <a class="quick-link" href="allergen-handling.html"><span class="ql-label">Start</span><span class="ql-name">Handwashing SOP</span><span class="ql-arrow">&rarr;</span></a>
+      <a class="quick-link" href="allergen-handling.html"><span class="ql-label">Critical</span><span class="ql-name">Allergen Handling</span><span class="ql-arrow">&rarr;</span></a>
+      <a class="quick-link" href="opening-checklist.html"><span class="ql-label">Checklist</span><span class="ql-name">Opening</span><span class="ql-arrow">&rarr;</span></a>
+      <a class="quick-link" href="search.html"><span class="ql-label">Find</span><span class="ql-name">Search Everything</span><span class="ql-arrow">&rarr;</span></a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>Peaches &middot; <a href="index.html">Home</a></p>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('main-nav');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+</script>
+
+<a class="crisis-float" href="crisis.html" aria-label="Crisis reference">
+  <span class="crisis-float-icon">!</span>
+  <span>Crisis</span>
+</a>
+</body>
+</html>
